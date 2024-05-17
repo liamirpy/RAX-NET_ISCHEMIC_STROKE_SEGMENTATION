@@ -37,15 +37,15 @@ keras == 3.3.3
 
 The pipeline of this project is listed in below.
 
-- [] Dataset (Download, Explaination of data, Exctraction of information eg. lesion distribution)
-- [] Spliting_data (Based on the previous extracted information, split the data for cross-validation) 
-- [] Transmition of data ( Copying and convert 3D MRI to 2D slices)
-- [] Read and prepare data for training and evaluation ( Read the data based on cross-validation spliting and save it in numpy array)
-- [] Prepare the model of training (Design the model, model hyperparameters)
-- [] Train the model 
-- [] Results for each planes
-- [] Other satates of art 
-- [] Applying fusion 
-- [] Fusion Result
-- [] The weighted and saved model for using 
-- [] Docker ( For ease of use, we developed the docker composer to easly use the model) 
+-[] Dataset (Download, Explaination of data, Exctraction of information eg. lesion distribution)
+-[] Spliting_data (Based on the previous extracted information, split the data for cross-validation) 
+-[] Transmition of data ( Copying and convert 3D MRI to 2D slices)
+-[] Read and prepare data for training and evaluation ( Read the data based on cross-validation spliting and save it in numpy array)
+-[] Prepare the model of training (Design the model, model hyperparameters)
+-[] Train the model 
+-[] Results for each planes
+-[] Other satates of art 
+-[] Applying fusion 
+-[] Fusion Result
+-[] The weighted and saved model for using 
+-[] Docker ( For ease of use, we developed the docker composer to easly use the model) 
