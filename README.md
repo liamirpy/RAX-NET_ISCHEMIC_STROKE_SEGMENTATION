@@ -71,7 +71,17 @@ The ATLAS dataset, designed for research purposes, offers a comprehensive compil
  
 In this section we covered these: 
 
++ Download ATLAS 
 
++ Display Lesions Location in Brain 
+
++ Extract Lesions Information For 3D MRIs Subjects
+
++ Extract Lesions Information For 2D Planes (Axial, Sagittal, Coronal)
+
++ Disply Lesions Dirstibution in 3D MRIs Subjects
+
++ Disply Lesion Distribution in 2D Planes
 
 
 
