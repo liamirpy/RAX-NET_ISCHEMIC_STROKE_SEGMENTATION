@@ -24,7 +24,7 @@ Also, You need to install tensorflow for GPU. You can install it by the followin
 
 For this prject we used the following version of tensorflow and keras:
 
-[This link](https://www.tensorflow.org/install/pip)
+[Install Tensorflow](https://www.tensorflow.org/install/pip)
 
 
 ```
