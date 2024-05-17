@@ -43,7 +43,7 @@ The pipeline of this project is listed in below.
 
 - [ ] **Transmition of Data** ( Copying and convert 3D MRI to 2D slices)
 
-- [ ] **Read/Prepare Data for Training and Evaluation** ( Read based on cross-validation spliting and save it in numpy arrays)
+- [ ] **Read/Prepare Data for Training and Evaluation** ( Read based on cross-validation spliting and save as arrays)
 
 - [ ] **Prepare the Model of Training** (Design the model and set model hyperparameters)
 
