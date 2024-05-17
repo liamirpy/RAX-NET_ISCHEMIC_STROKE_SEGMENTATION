@@ -1,3 +1,3 @@
-# XEPTION RESIDUAL ATTENTION_UNET_Ischemic_stroke_Segmentation_ATLAS_2
+# XEPTION RESIDUAL ATTENTION_UNET
 
 We developed a new model for Brain Stroke Lesion Segmentation (ATLAS 2.0)
