@@ -73,7 +73,7 @@ In this section we covered these:
 
 + Download ATLAS 
 
-+ Display Lesions Location in Brain 
++ Display Lesions Location in Cortical and Subcortical 
 
 + Extract Lesions Information For 3D MRIs Subjects
 
