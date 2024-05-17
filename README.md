@@ -73,13 +73,13 @@ In this section we covered these:
 
 + Download ATLAS 
 
-+ Display Lesions Location in Cortical and Subcortical 
++ Display Lesion Locations in Cortical and Subcortical Regions
 
-+ Extract Lesions Information For 3D MRIs Subjects
++ Extract Lesion Information For 3D MRIs Subjects
 
-+ Extract Lesions Information For 2D Planes (Axial, Sagittal, Coronal)
++ Extract Lesion Information For 2D Planes (Axial, Sagittal, Coronal)
 
-+ Disply Lesions Dirstibution in 3D MRIs Subjects
++ Disply Lesion Dirstibution in 3D MRIs Subjects
 
 + Disply Lesion Distribution in 2D Planes
 
