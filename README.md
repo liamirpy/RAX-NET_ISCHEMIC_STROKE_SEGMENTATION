@@ -63,3 +63,24 @@ The pipeline of this project is listed in below.
 
 - [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model) 
 
+
+# [Dataset](./Dataset)
+
+The ATLAS dataset, designed for research purposes, offers a comprehensive compilation of ischemic stroke MRI scans, accompanied by accurately annotated lesion masks.
+ This dataset encompasses a total of 955 cases, with 655 subjects having their corresponding ground truth labels available.
+ 
+In this section we covered these: 
+
+
+
+
+
+
+
+> [!TIP]
+> For developing your own use and for comprehensive details, please read the information in the [dataset directory](./Dataset)
+
+
+
+
+
