@@ -4,7 +4,7 @@ In this repository, we introduce a new architecture based on a deep learning mod
 completed before proceeding to the next section, as this approach follows a sequential manner.
 
 
-#ISCHEMIC STROKE
+# ISCHEMIC STROKE
 
 When the blood supply to the brain is obstructed by a cloth, there is insufficient oxygen delivery to brain tissues, resulting in cellular necrosis. 
 In healthcare settings, it is imperative to identify and delineate the boundaries of ischemic lesions to facilitate treatment and surgical planning. 
