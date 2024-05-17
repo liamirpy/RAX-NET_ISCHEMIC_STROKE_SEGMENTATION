@@ -36,7 +36,7 @@ keras == 3.3.3
 # PIPLINE 
 
 The pipeline of this project is listed in below.
-
+ 
 - [ ] Dataset (Download, Explaination of data, Exctraction of information eg. lesion distribution)
 - [ ] Spliting_data (Based on the previous extracted information, split the data for cross-validation) 
 - [ ] Transmition of data ( Copying and convert 3D MRI to 2D slices)
