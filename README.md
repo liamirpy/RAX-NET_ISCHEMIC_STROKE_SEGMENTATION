@@ -10,6 +10,8 @@ When the blood supply to the brain is obstructed by a cloth, there is insufficie
  In healthcare settings, it is imperative to identify and delineate the boundaries of ischemic lesions to facilitate treatment and surgical planning. 
  Stroke, also referred to as a cerebrovascular accident, is a prevalent neurological disorder worldwide. Additionally, stroke ranks as the second primary contributor to mortality. 
 
+![] (./figures/ischemic.gif)
+
 # REQUIREMENTS 
 
  Before starting, please ensure that all the requirements listed below are installed on your local PC or server.
