@@ -10,9 +10,9 @@ When the blood supply to the brain is obstructed by a cloth, there is insufficie
  In healthcare settings, it is imperative to identify and delineate the boundaries of ischemic lesions to facilitate treatment and surgical planning. 
  Stroke, also referred to as a cerebrovascular accident, is a prevalent neurological disorder worldwide. Additionally, stroke ranks as the second primary contributor to mortality. 
 
-# PIPLINE 
+# REQUIREMENTS 
 
-The pipeline of this project is listed in the following sections. Before starting, please ensure that all the requirements listed below are installed on your local PC or server.
+ Before starting, please ensure that all the requirements listed below are installed on your local PC or server.
  After downloading this repository, navigate to the main directory and execute the following command in your terminal. (Linux is the preferred operating system for this project.)
 
 
@@ -32,3 +32,6 @@ tensorflow == 2.16.1
 keras == 3.3.3 
 ```
 
+# PIPLINE 
+
+The pipeline of this project is listed in the following sections. 
