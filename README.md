@@ -19,3 +19,16 @@ The pipeline of this project is listed in the following sections. Before startin
 ```
 pip install -r requirements.txt
 ```
+Also, You need to install tensorflow for GPU. You can install it by the following link.
+
+
+For this prject we used the following version of tensorflow and keras:
+
+[This link](https://www.tensorflow.org/install/pip)
+
+
+```
+tensorflow == 2.16.1
+keras == 3.3.3 
+```
+
