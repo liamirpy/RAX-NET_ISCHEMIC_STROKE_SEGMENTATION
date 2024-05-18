@@ -28,10 +28,9 @@ The depiction of lesion distribution across different regions within the cortica
 For extracting the information for All 655, 3D MRI run the following code:
 
 
-```
+``` 
 
 python3 Extract_lesion_information.py --directory=./ATLAS_2/Training --plane=all  
-
 
 ```
 The output will save in directory /CSV/ATLAS_Lesion_information_for_3D_MRI_Subject.csv
