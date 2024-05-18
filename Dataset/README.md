@@ -11,7 +11,7 @@ The ATLAS dataset is available at [ATLAS_2](http://fcon_1000.projects.nitrc.org/
 > We did not put the dataset in this repository.
 
 > [!IMPORTANT]
-> If you want to regenerate these codes, please put the dataset in main directory of this repository.(Named: ATALS_2)
+> If you want to regenerate these codes, please put the dataset in this directory of this repository.(Named: ATALS_2)
 
 
 
