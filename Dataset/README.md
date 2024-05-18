@@ -29,7 +29,9 @@ For extracting the information for All 655, 3D MRI run the following code:
 
 
 ```
+
 python3 Extract_lesion_information.py --directory=./ATLAS_2/Training --plane=all  
+
 
 ```
 The output will save in directory /CSV/ATLAS_Lesion_information_for_3D_MRI_Subject.csv
@@ -40,6 +42,7 @@ For extracting the information for **Axial** plane of  All 655, 3D MRI run the f
 
 
 ```
+
 python3 Extract_lesion_information.py --directory=./ATLAS_2/Training --plane=axial
 
 ```       
@@ -53,7 +56,9 @@ The output will save in directory /CSV/ATLAS_Axial_Lesion_information.csv
 For extracting the information for **Sagittal** plane of  All 655, 3D MRI run the following code:
 
 
+
 ```
+
 python3 Extract_lesion_information.py --directory=./ATLAS_2/Training --plane=sagittal
 
 ```       
@@ -68,6 +73,7 @@ For extracting the information for **Coronal** plane of  All 655, 3D MRI run the
 
 
 ```
+
 python3 Extract_lesion_information.py --directory=./ATLAS_2/Training --plane=coronal
 
 ```       
