@@ -178,3 +178,8 @@ For more information about this splitting, please go to the [Data_Splitting](./D
 - [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model)
 
 
+# Moving_Converting_data
+
+In this section, we developed the code to use the CSV files generated in the previous section to move 80% and 20% of the data to their respective folders.
+ Additionally, we converted the 80% of the data into 2D slices for each plane: axial, sagittal, and coronal.
+
