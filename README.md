@@ -42,7 +42,7 @@ The pipeline of this project is listed in below.
  
 - [ ] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
 
-- [ ] **Spliting Data** (Based on the previously extracted information, split the 3D data)
+- [ ] **Data Spliting** (Based on the previously extracted information, split the 3D data)
 
 - [ ] **Cross-Validation** (Bas on previous section, develop cross-validation for training the model)
 
@@ -110,7 +110,7 @@ In this section we covered these:
 
 - [x] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
 
-- [ ] **Spliting Data** (Based on the previously extracted information, split the 3D data)                  
+- [ ] **Data Splitting** (Based on the previously extracted information, split the 3D data)                  
 
 - [ ] **Cross-Validation** (Bas on previous section, develop cross-validation for training the model)
 
@@ -133,4 +133,11 @@ In this section we covered these:
 - [ ] **The Weighted and Saved model for Use**
 
 - [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model)
+
+
+# [Data_Splitting](./Splitting-data)
+
+
+
+
 
