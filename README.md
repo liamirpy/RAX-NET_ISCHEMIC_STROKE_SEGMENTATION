@@ -99,7 +99,7 @@ In this section we covered these:
 
 
 > [!TIP]
-> For developing your own use and for comprehensive details, please read the information in the [dataset directory](./Dataset)
+> For developing your own use and for comprehensive details, please read the information in the [Dataset directory](./Dataset).
 
 
 > [!NOTE]
@@ -135,9 +135,26 @@ In this section we covered these:
 - [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model)
 
 
-# [Data_Splitting](./Splitting-data)
+# [Data_Splitting](./Data_Splitting)
+
+In this section, based on the extracted information in the previous section, we split the 3D MRI data into two groups:
+
+- 80% for training and evaluation of 2D models
+- 20% for evaluation of the fusion model that we discuss further in this readme
 
 
+
+```mermaid
+graph TD;
+    ATLAS_2-->80% for training-evalution 2D model;
+    A-->20% for evaluation fusion model;
+```
+
+
+
+
+
+For more information about this splitting, please go to the [Data_Splitting](./Data_Splitting) directory.
 
 
 
