@@ -151,4 +151,30 @@ graph TD;
 For more information about this splitting, please go to the [Data_Splitting](./Data_Splitting) directory.
 
 
+- [x] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
+
+- [x] **Data Splitting** (Based on the previously extracted information, split the 3D data)
+
+- [ ] **Cross-Validation** (Bas on previous section, develop cross-validation for training the model)
+
+- [ ] **Transmition of Data** ( Copying and convert 3D MRI to 2D slices)
+
+- [ ] **Read/Prepare Data for Training and Evaluation** ( Read based on cross-validation spliting and save as arrays)
+
+- [ ] **Prepare the Model of Training** (Design the model and set model hyperparameters)
+
+- [ ] **Train the Model**
+
+- [ ] **Results for Each Planes**
+
+- [ ] **Other satates of art**
+
+- [ ] **Applying Fusion**
+
+- [ ] **Fusion Result**
+
+- [ ] **The Weighted and Saved model for Use**
+
+- [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model)
+
 
