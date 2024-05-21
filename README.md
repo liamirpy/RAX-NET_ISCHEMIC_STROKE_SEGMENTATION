@@ -95,7 +95,7 @@ In this section we covered these:
 
 <details>
 
-<summary>Progress</summary>
+<summary>**Progress**</summary>
 
 - [x] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
 
