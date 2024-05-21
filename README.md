@@ -146,8 +146,8 @@ In this section, based on the extracted information in the previous section, we 
 
 ```mermaid
 graph TD;
-    ATLAS_2-->80% for training-evalution 2D model;
-    A-->20% for evaluation fusion model;
+    ATLAS_2-->80 percent for training-evalution 2D model;
+    A-->20 percent for evaluation fusion model;
 ```
 
 
