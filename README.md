@@ -38,8 +38,7 @@ keras == 3.3.3
 # PIPLINE 
 
 The pipeline of this project is listed in below.
-```
-[tasklist]
+
  
 - [ ] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
 
@@ -64,8 +63,6 @@ The pipeline of this project is listed in below.
 - [ ] **The Weighted and Saved model for Use** 
 
 - [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model) 
-
-```
 
 
 # [Dataset](./Dataset)
@@ -96,8 +93,9 @@ In this section we covered these:
 >  The output of this part are CSV files, which contain the dataset information for 3D subject and also for Axial,Sagittal and Coronal Planes.
 >   The information are included the lesion size and distribution.
 
-``` 
-[tasklist]
+<details>
+
+<summary>Progress</summary>
 
 - [x] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
 
@@ -123,6 +121,5 @@ In this section we covered these:
 
 - [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model)
 
-```
-
+</details>
 
