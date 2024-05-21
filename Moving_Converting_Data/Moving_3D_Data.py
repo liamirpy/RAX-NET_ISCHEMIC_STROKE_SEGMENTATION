@@ -48,10 +48,10 @@ import os
 ATLAS_Train_directory='../Dataset/ATLAS_2/Training'
 
 
-Train_csv = '../Data_Splitting/CSV/Sagittal_Lesion_information_for_20_percent_of_3D_MRI_Subject.csv'
+Train_csv = '../Data_Splitting/CSV/Lesion_information_for_80_percent_of_3D_MRI_Subject.csv'
 
 
-Fusion_evaluation_csv='../Data_Splitting/CSV/Sagittal_Lesion_information_for_20_percent_of_3D_MRI_Subject.csv'
+Fusion_evaluation_csv='../Data_Splitting/CSV/Lesion_information_for_20_percent_of_3D_MRI_Subject.csv'
 
 
 Train_folder_mri='Train_3D_Data/mri'
