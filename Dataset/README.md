@@ -80,6 +80,56 @@ The output will save in directory /CSV/ATLAS_Coronal_Lesion_information.csv
 
 
 
+# Display Lesion Distribution in 3D MRI Subjects
+
+The image below represents the lesion size distribution in 655 3D subjects.
+
+> [!IMPORTANT]
+> The ranges used for categorizing the distribution of lesion volume voxels in 3D MRI subjects are represented as labels in the plot below.
+
+
+
+
+![Figure](./figures/Lesion_information_in_665_3D_Subjects.png) 
+
+# Disply Lesion Distribution in 2D Axial Plane
+
+The image below represents the lesion size distribution in Axial Plane of 655 3D MRI Subjects.
+
+
+> [!IMPORTANT]
+> The ranges used for categorizing the distribution of lesion volume Pixels in Axial Plane 3D MRI subjects are represented as labels in the plot below.
+
+
+
+![Figure](./figures/Lesion_information_in_Axial_Plane_665_3D_Subjects.png)
+
+# Display Lesion Distribution in 2D Sagittal Plane
+
+The image below represents the lesion size distribution in Sagittal Plane of 655 3D MRI Subjects.
+
+> [!IMPORTANT]
+> The ranges used for categorizing the distribution of lesion volume pixels in Sagittal Plane 3D MRI subjects are represented as labels in the plot below.
+
+
+
+
+![Figure](./figures/Lesion_information_in_Sagittal_Plane_665_3D_Subjects.png)
+
+
+# Display Lesion Distribution in 2D Coronal Plane
+
+The image below represents the lesion size distribution in Coronal Plane of 655 3D MRI Subjects.
+
+> [!IMPORTANT]
+> The ranges used for categorizing the distribution of lesion volume pixels in Coronal Plane 3D MRI subjects are represented as labels in the plot below.
+
+
+
+
+![Figure](./figures/Lesion_information_in_Coronal_Plane_665_3D_Subjects.png)
+
+
 
 
 
