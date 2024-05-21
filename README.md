@@ -144,7 +144,7 @@ In this section, based on the extracted information in the previous section, we 
 
 ```mermaid
 graph TD;
-    A-->B;
+    ATLAS-->80;
     A-->C;
     B-->D;
     C-->D;
