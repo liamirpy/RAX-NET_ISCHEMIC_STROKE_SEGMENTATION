@@ -160,6 +160,7 @@ cython_debug/
 #.idea
 #
 *.nii.gz
+*.json
 #Dataset/ATLAS_2
 #Moving_Converting_Data/Train_3D_Data
 #Moving_Converting_Data/Fusion_evaluation_3D_Data
