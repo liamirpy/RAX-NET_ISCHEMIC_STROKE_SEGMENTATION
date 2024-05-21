@@ -37,29 +37,35 @@ import numpy as np
 
 import nibabel as nib
 
-import cv2
 
 import os 
 
-train_directory='../Dataset/ATLAS_2/Training'
 
 
-train_csv = 'training_validation_data_3D_80_percentage.csv'
 
 
-fusion_evaluation_csv='test_data_3D_20_percentage.csv'
+
+ATLAS_Train_directory='../Dataset/ATLAS_2/Training'
 
 
-train_folder_mri='Train_3D_Data/mri'
+Train_csv = '../Data_Splitting/CSV/Sagittal_Lesion_information_for_20_percent_of_3D_MRI_Subject.csv'
 
 
-test_folder_mri='Fusion_evaluation_3D_Data/mri'
+Fusion_evaluation_csv='../Data_Splitting/CSV/Sagittal_Lesion_information_for_20_percent_of_3D_MRI_Subject.csv'
 
 
-train_folder_mask='Train_3D_Data/mask'
+Train_folder_mri='Train_3D_Data/mri'
 
 
-test_folder_mask='Fusion_evaluation_3D_Data/mask'
+Fusion_evaluation_folder_mri='Fusion_evaluation_3D_Data/mri'
+
+
+Train_folder_mask='Train_3D_Data/mask'
+
+
+Fusion_evaluation_folder_mask='Fusion_evaluation_3D_Data/mask'
+
+
 
 
 def moving_3D_Data(train_csv,test_csv,train_folder_mri,test_folder_mri,train_folder_mask,test_folder_mask):
@@ -96,9 +102,9 @@ def moving_3D_Data(train_csv,test_csv,train_folder_mri,test_folder_mri,train_fol
 
 
 
-            mri_file= f'{train_directory}/{main_folder}/{subject_name}/ses-1/anat/{subject_name}_ses-1_space-MNI152NLin2009aSym_T1w.nii.gz'
+            mri_file= f'{ATLAS_Train_directory}/{main_folder}/{subject_name}/ses-1/anat/{subject_name}_ses-1_space-MNI152NLin2009aSym_T1w.nii.gz'
 
-            mask_file= f'{train_directory}/{main_folder}/{subject_name}/ses-1/anat/{subject_name}_ses-1_space-MNI152NLin2009aSym_label-L_desc-T1lesion_mask.nii.gz'
+            mask_file= f'{ATLAS_Train_directory}/{main_folder}/{subject_name}/ses-1/anat/{subject_name}_ses-1_space-MNI152NLin2009aSym_label-L_desc-T1lesion_mask.nii.gz'
 
 
             shutil.copy(mri_file, train_folder_mri)
@@ -140,9 +146,9 @@ def moving_3D_Data(train_csv,test_csv,train_folder_mri,test_folder_mri,train_fol
 
 
 
-            mri_file= f'{train_directory}/{main_folder}/{subject_name}/ses-1/anat/{subject_name}_ses-1_space-MNI152NLin2009aSym_T1w.nii.gz'
+            mri_file= f'{ATLAS_Train_directory}/{main_folder}/{subject_name}/ses-1/anat/{subject_name}_ses-1_space-MNI152NLin2009aSym_T1w.nii.gz'
 
-            mask_file= f'{train_directory}/{main_folder}/{subject_name}/ses-1/anat/{subject_name}_ses-1_space-MNI152NLin2009aSym_label-L_desc-T1lesion_mask.nii.gz'
+            mask_file= f'{ATLAS_Train_directory}/{main_folder}/{subject_name}/ses-1/anat/{subject_name}_ses-1_space-MNI152NLin2009aSym_label-L_desc-T1lesion_mask.nii.gz'
 
 
             shutil.copy(mri_file, test_folder_mri)
@@ -153,4 +159,4 @@ def moving_3D_Data(train_csv,test_csv,train_folder_mri,test_folder_mri,train_fol
 
 
 
-moving_3D_Data(train_csv,test_csv,train_folder_mri,test_folder_mri,train_folder_mask,test_folder_mask)
+moving_3D_Data(Train_csv,Fusion_evaluation_csv,Train_folder_mri,Fusion_evaluation_folder_mri,Fusion_evaluation_folder_mri,Fusion_evaluation_folder_mask)
