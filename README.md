@@ -84,12 +84,37 @@ In this section we covered these:
 + Disply Lesion Distribution in 2D Planes
 
 
-
-
-
 > [!TIP]
 > For developing your own use and for comprehensive details, please read the information in the [dataset directory](./Dataset)
 
+
+> [!NOTE]
+>  The output of this part are CSV files, which contain the dataset information for 3D subject and also for Axial,Sagittal and Coronal Planes.
+>   The information are included the lesion size and distribution.
+
+- [x] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
+
+- [ ] **Spliting Data** (Based on the previously extracted information, split the data for cross-validation)
+
+- [ ] **Transmition of Data** ( Copying and convert 3D MRI to 2D slices)
+
+- [ ] **Read/Prepare Data for Training and Evaluation** ( Read based on cross-validation spliting and save as arrays)
+
+- [ ] **Prepare the Model of Training** (Design the model and set model hyperparameters)
+
+- [ ] **Train the Model**
+
+- [ ] **Results for Each Planes**
+
+- [ ] **Other satates of art**
+
+- [ ] **Applying Fusion**
+
+- [ ] **Fusion Result**
+
+- [ ] **The Weighted and Saved model for Use**
+
+- [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model)
 
 
 
