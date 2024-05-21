@@ -42,7 +42,9 @@ The pipeline of this project is listed in below.
  
 - [ ] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
 
-- [ ] **Spliting Data** (Based on the previously extracted information, split the data for cross-validation) 
+- [ ] **Spliting Data** (Based on the previously extracted information, split the 3D data)
+
+- [ ] **Cross-Validation** (Bas on previous section, develop cross-validation for training the model)
 
 - [ ] **Transmition of Data** ( Copying and convert 3D MRI to 2D slices)
 
@@ -101,14 +103,16 @@ In this section we covered these:
 
 
 > [!NOTE]
->  The output of this part are CSV files, which contain the dataset information for 3D subject and also for Axial,Sagittal and Coronal Planes.
+>  The output of this part are CSV files, which contain the dataset information for **ALL** 3D subject and also for Axial,Sagittal and Coronal Planes.
 >   The information are included the lesion size and distribution.
 
 
 
 - [x] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
 
-- [ ] **Spliting Data** (Based on the previously extracted information, split the data for cross-validation)
+- [ ] **Spliting Data** (Based on the previously extracted information, split the 3D data)                  
+
+- [ ] **Cross-Validation** (Bas on previous section, develop cross-validation for training the model)
 
 - [ ] **Transmition of Data** ( Copying and convert 3D MRI to 2D slices)
 
