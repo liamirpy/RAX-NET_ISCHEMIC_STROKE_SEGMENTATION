@@ -144,16 +144,6 @@ In this section, based on the extracted information in the previous section, we 
 
 
 
-```mermaid
-graph TD;
-    ATLAS_2--> 80 percent for training-evalution 2D model;
-    A--> 20 percent for evaluation fusion model;
-```
-
-
-
-
-
 For more information about this splitting, please go to the [Data_Splitting](./Data_Splitting) directory.
 
 
