@@ -159,7 +159,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea
 #
-Dataset/ATLAS_2
-Moving_Converting_Data/Train_3D_Data
-Moving_Converting_Data/Fusion_evaluation_3D_Data
+*.nii.gz
+#Dataset/ATLAS_2
+#Moving_Converting_Data/Train_3D_Data
+#Moving_Converting_Data/Fusion_evaluation_3D_Data
 
