@@ -93,9 +93,7 @@ In this section we covered these:
 >  The output of this part are CSV files, which contain the dataset information for 3D subject and also for Axial,Sagittal and Coronal Planes.
 >   The information are included the lesion size and distribution.
 
-<details>
 
-<summary> **Progress** </summary>
 
 - [x] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
 
@@ -120,6 +118,4 @@ In this section we covered these:
 - [ ] **The Weighted and Saved model for Use**
 
 - [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model)
-
-</details>
 
