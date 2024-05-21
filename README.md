@@ -144,10 +144,8 @@ In this section, based on the extracted information in the previous section, we 
 
 ```mermaid
 graph TD;
-    ATLAS-->80;
-    A-->C;
-    B-->D;
-    C-->D;
+    ATLAS-->80 Percet;
+    ATLAS-->20 Percent;
 ```
 
 For more information about this splitting, please go to the [Data_Splitting](./Data_Splitting) directory.
