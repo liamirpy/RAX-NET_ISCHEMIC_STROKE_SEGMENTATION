@@ -142,7 +142,13 @@ In this section, based on the extracted information in the previous section, we 
 - 80% for training and evaluation of 2D models
 - 20% for evaluation of the fusion model that we discuss further in this readme
 
-
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 
 For more information about this splitting, please go to the [Data_Splitting](./Data_Splitting) directory.
 
