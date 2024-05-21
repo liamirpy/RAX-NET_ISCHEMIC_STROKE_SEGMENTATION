@@ -69,6 +69,17 @@ The pipeline of this project is listed in below.
 
 The ATLAS dataset, designed for research purposes, offers a comprehensive compilation of ischemic stroke MRI scans, accompanied by accurately annotated lesion masks.
  This dataset encompasses a total of 955 cases, with 655 subjects having their corresponding ground truth labels available.
+
+Lesion Locations in Cortical and Subcortical Regions in ATLAS_2:
+
+
+
+![Figure](./Dataset/figures/cortical_subcortical_distribution.png)
+
+
+
+
+
  
 In this section we covered these: 
 
