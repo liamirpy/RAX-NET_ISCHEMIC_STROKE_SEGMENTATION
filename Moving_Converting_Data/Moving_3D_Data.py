@@ -159,4 +159,4 @@ def moving_3D_Data(train_csv,test_csv,train_folder_mri,test_folder_mri,train_fol
 
 
 
-moving_3D_Data(Train_csv,Fusion_evaluation_csv,Train_folder_mri,Fusion_evaluation_folder_mri,Fusion_evaluation_folder_mri,Fusion_evaluation_folder_mask)
+moving_3D_Data(Train_csv,Fusion_evaluation_csv,Train_folder_mri,Fusion_evaluation_folder_mri,Train_folder_mask,Fusion_evaluation_folder_mask)

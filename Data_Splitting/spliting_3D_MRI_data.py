@@ -41,10 +41,6 @@ import random
 
 
 
-### The bins distribution for 3D MRI images are :
-###    bins = [0,5000,20000,50000,100000,200000,float('inf')]
-
-
 
 
 def categorized_3D_MRI_to_each_bins():
@@ -111,7 +107,7 @@ def categorized_3D_MRI_to_each_bins():
                 data_bins['data_bin_3'].append(data_bin)
 
             
-            elif bins[3] < sum_voxel <= bins[5]:
+            elif bins[4] < sum_voxel <= bins[5]:
                             
                 data_bin ['subject_name']= subject_name
                 data_bin ['sum_voxel']= sum_voxel
@@ -120,7 +116,7 @@ def categorized_3D_MRI_to_each_bins():
 
 
             
-            else:
+            elif bins[5] < sum_voxel <= bins[6]:
 
                 data_bin ['subject_name']= subject_name
                 data_bin ['sum_voxel']= sum_voxel
@@ -156,7 +152,7 @@ percentage_to_sample = 20
 # Iterate over each bin in the data_bins dictionary
 for bin_key, bin_values in data_bins.items():
     # Calculate the number of elements to sample (20% of the total)
-    num_elements_to_sample = int(len(bin_values) * percentage_to_sample / 100)
+    num_elements_to_sample = round(len(bin_values) * percentage_to_sample / 100)
 
     # Randomly sample 20% of the data
     sampled_data = random.sample(bin_values, num_elements_to_sample)

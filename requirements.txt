@@ -13,6 +13,7 @@ seaborn==0.13.2
 six==1.16.0
 nilearn==0.10.3
 opencv-python==4.8.1.78
+seaborn==0.13.2
 #tensorboard==2.16.2
 #tensorboard-data-server==0.7.2
 #tensorflow==2.16.1

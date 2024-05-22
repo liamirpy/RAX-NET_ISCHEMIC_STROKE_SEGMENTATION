@@ -148,6 +148,25 @@ graph TD;
     ATLAS-->20Percent;
 ```
 
+**The image below represents the lesion size distribution in 80 Percent of  655 3D subjects.**
+
+> [!IMPORTANT]
+> The ranges used for categorizing the distribution of lesion volume voxels in 3D MRI subjects are represented as labels in the plot below.
+
+
+![Figure](./figures/Lesion_information_in_80_Percent_of_665_3D_Subjects.png) 
+
+
+**The image below represents the lesion size distribution in 20 Percent of  655 3D subjects.**
+
+> [!IMPORTANT]
+> The ranges used for categorizing the distribution of lesion volume voxels in 3D MRI subjects are represented as labels in the plot below.
+
+![Figure](./figures/Lesion_information_in_20_Percent_of_665_3D_Subjects.png)
+
+
+
+
 For more information about this splitting, please go to the [Data_Splitting](./Data_Splitting) directory.
 
 
@@ -178,8 +197,26 @@ For more information about this splitting, please go to the [Data_Splitting](./D
 - [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model)
 
 
-# Moving_Converting_data
+# [Mvoving_Converting_data](./Moving_Converting_Data)
 
 In this section, we developed the code to use the CSV files generated in the previous section to move 80% and 20% of the data to their respective folders.
  Additionally, we converted the 80% of the data into 2D slices for each plane: axial, sagittal, and coronal.
 
+
+# Cross-Validation 
+
+For evaluating the model, cross-validation is important. We developed k-fold cross-validation where we split the data into k folds and trained the model k times.
+ Each time, we trained the model on k-1 folds and evaluated the model on the remaining 1 fold.
+
+In the previous section, we converted 3D MRI scans into 2D images for Axial, Sagittal, and Coronal planes. 
+For generating the k-fold cross-validation for these 2D images, we developed a code to create k-folds for each plane while considering two important factors:
+
+
+- **In each fold, the lesion size distribution should be the same as the overall distribution, ensuring consistent lesion distribution across all data.**
+
+- **The folds should not overlap. By this, we mean that no slice of one subject should appear in two different folds because if the model learns from slices of the same subject during training, 
+evaluating it on other slices of the same subject would not be valid. This would hinder our ability to assess the generalization of the model.**
+
+We developed the code taking these two considerations into account to generate k-fold cross-validation data. You can use this code for this dataset and your own projects.
+
+For more details about this code and how to generate it, please refer to the cross-validation directory.
