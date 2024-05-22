@@ -43,24 +43,22 @@ import random
 random.seed(42)
 
 
-axial_bins=[0,500,1000,1500,2000,2500,3000,3500,4000,4500,float('inf')]
+axial_bins=[0,200,500,1000,2000,3000,float('inf')]
 
 
 
 
 
 
-
-number_of_axial_bins=5
 
 def put_data_to_bins_axial():
 
-    csv_file_path = 'lesion_axial_distribution_train_dataset.csv'
+    csv_file_path = '../../Data_Splitting/CSV/Axial_Lesion_information_for_80_percent_of_3D_MRI_Subject.csv'
 
     data_bins_axial={
         
                 'data_bin_1':[],'data_bin_2':[],'data_bin_3':[],'data_bin_4':[],'data_bin_5':[],
-                'data_bin_6':[],'data_bin_7':[],'data_bin_8':[],'data_bin_9':[],'data_bin_10':[]
+                'data_bin_6':[]
 
             
             }
@@ -167,55 +165,7 @@ def put_data_to_bins_axial():
 
 
 
-            elif axial_bins[6] < sum_voxel <= axial_bins[7]:
-                            
-                data_bins ['subject_name']= subject_name
-                data_bins ['slice']= slice
-                data_bins ['number_of_lesion']= number_of_lesion
-                data_bins ['sum_voxel']= sum_voxel
-                data_bins ['max_size']= max_size
 
-                data_bins_axial['data_bin_7'].append(data_bins)
-
-
-
-
-
-            elif axial_bins[7] < sum_voxel <= axial_bins[8]:
-                            
-                data_bins ['subject_name']= subject_name
-                data_bins ['slice']= slice
-                data_bins ['number_of_lesion']= number_of_lesion
-                data_bins ['sum_voxel']= sum_voxel
-                data_bins ['max_size']= max_size
-
-                data_bins_axial['data_bin_8'].append(data_bins)
-
-
-
-
-            elif axial_bins[8] < sum_voxel <= axial_bins[9]:
-                            
-                data_bins ['subject_name']= subject_name
-                data_bins ['slice']= slice
-                data_bins ['number_of_lesion']= number_of_lesion
-                data_bins ['sum_voxel']= sum_voxel
-                data_bins ['max_size']= max_size
-
-                data_bins_axial['data_bin_9'].append(data_bins)               
-
-
-            
-            elif axial_bins[10] < sum_voxel <= axial_bins[11]:
-
-                data_bins ['subject_name']= subject_name
-                data_bins ['slice']= slice
-                data_bins ['number_of_lesion']= number_of_lesion
-                data_bins ['sum_voxel']= sum_voxel
-                data_bins ['max_size']= max_size
-
-                data_bins_axial['data_bin_10'].append(data_bins)
-    
 
     return num_rows,data_bins_axial
 
@@ -240,39 +190,43 @@ axial_folds={
 
 
 
-len_axial_bin=10
-
-
-number_of_extra_slice=str(number_of_axial_slice/10)[-1]
-
+len_axial_bin=6
 number_of_fold=5
+
+number_of_extra_slice=str(number_of_axial_slice/number_of_fold)[-1]
+
 
 
 bin_allowness_for_each_fold={
         
-                'data_bin_1':int(len(data_bins_axial['data_bin_1'])/5),     'data_bin_2':int(len(data_bins_axial['data_bin_2'])/5) ,       'data_bin_3':int(len(data_bins_axial['data_bin_3'])/5),      'data_bin_4':int(len(data_bins_axial['data_bin_4'])/10),  
-                                    'data_bin_5':int(len(data_bins_axial['data_bin_5'])/5),              'data_bin_6':int(len(data_bins_axial['data_bin_6'])/5),        
-                                      'data_bin_7':int(len(data_bins_axial['data_bin_7'])/5),         'data_bin_8':int(len(data_bins_axial['data_bin_8'])/5),  
-                                                    'data_bin_9':int(len(data_bins_axial['data_bin_9'])/5),             'data_bin_10':int(len(data_bins_axial['data_bin_10'])/5)
-            
+                'data_bin_1':int(len(data_bins_axial['data_bin_1'])/number_of_fold),    
+                'data_bin_2':int(len(data_bins_axial['data_bin_2'])/number_of_fold) ,  
+                'data_bin_3':int(len(data_bins_axial['data_bin_3'])/number_of_fold), 
+                'data_bin_4':int(len(data_bins_axial['data_bin_4'])/number_of_fold),  
+                'data_bin_5':int(len(data_bins_axial['data_bin_5'])/number_of_fold),   
+                'data_bin_6':int(len(data_bins_axial['data_bin_6'])/number_of_fold),        
+                                      
             }
 
 
 
 
-size_each_fold=int(len(data_bins_axial['data_bin_1'])/5)+ int(len(data_bins_axial['data_bin_2'])/5)+ int(len(data_bins_axial['data_bin_3'])/5)+ int(len(data_bins_axial['data_bin_4'])/5) \
-                + int(len(data_bins_axial['data_bin_5'])/5)
+size_each_fold= int(len(data_bins_axial['data_bin_1'])/5)\
+        +int(len(data_bins_axial['data_bin_2'])/5)\
+        +int(len(data_bins_axial['data_bin_3'])/5) \
+        +int(len(data_bins_axial['data_bin_4'])/5) \
+        + int(len(data_bins_axial['data_bin_5'])/5)
 
 
 
 bin_picked_for_each_fold={
         
-                'data_bin_1':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},'data_bin_2':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
-                'data_bin_3':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},'data_bin_4':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
+                'data_bin_1':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
+                'data_bin_2':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
+                'data_bin_3':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
+                'data_bin_4':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
                 'data_bin_5':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
-                'data_bin_6':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},'data_bin_7':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
-                'data_bin_8':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},'data_bin_9':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
-                'data_bin_10':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0}
+                'data_bin_6':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0}
 
             }
 
@@ -299,13 +253,21 @@ def find_empty_fold():
 
 
 
-sum_fold=len(axial_folds['axial_fold_1'])+len(axial_folds['axial_fold_2'])+len(axial_folds['axial_fold_3'])+len(axial_folds['axial_fold_4'])+len(axial_folds['axial_fold_5'])
+sum_fold=len(axial_folds['axial_fold_1'])\
+    +len(axial_folds['axial_fold_2'])\
+    +len(axial_folds['axial_fold_3'])\
+    +len(axial_folds['axial_fold_4'])\
+    +len(axial_folds['axial_fold_5'])
 
 
 
-while( sum_fold < size_each_fold * 5 ): 
+while( sum_fold < size_each_fold * number_of_fold ): 
 
-    sum_fold=len(axial_folds['axial_fold_1'])+len(axial_folds['axial_fold_2'])+len(axial_folds['axial_fold_3'])+len(axial_folds['axial_fold_4'])+len(axial_folds['axial_fold_5'])
+    sum_fold=len(axial_folds['axial_fold_1'])\
+        +len(axial_folds['axial_fold_2'])\
+        +len(axial_folds['axial_fold_3'])\
+        +len(axial_folds['axial_fold_4'])\
+        +len(axial_folds['axial_fold_5'])
 
 
     
@@ -405,7 +367,7 @@ for fo in range(1,6):
 
     axial_slices=axial_folds[f'axial_fold_{fo}']
     # CSV file path
-    csv_file_path = f'./axial/lesion_distribution_axial_fold_{fo}.csv'
+    csv_file_path = f'./Axial_K_Fold_CSV/Axial_Lesion_fold_0{fo}.csv'
 
     # Writing data to CSV file
     with open(csv_file_path, 'w', newline='') as csvfile:

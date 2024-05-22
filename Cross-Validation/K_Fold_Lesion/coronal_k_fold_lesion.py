@@ -31,8 +31,8 @@
 '''
 
 
-#axial bins
-# bins = [0,500,1000,1500,2000,2500,3000,3500,4000,4500,float('inf')]
+
+
 import csv
 
 import numpy as np
@@ -43,22 +43,39 @@ import random
 
 random.seed(42)
 
-coronal_bins=[0,500,1000,1500,2000,2500,3000,3500,4000,float('inf')]
+
+ranges_in_Coronal_3D_Subject = [
+    (0, 200, 'r'), 
+    (200, 500, 'indigo'), 
+    (500, 1000, 'gold'), 
+    (1000, 2000, 'b'), 
+    (2000, 3000, 'chocolate'), 
+    (3000, float('inf'), 'black'), 
+]
 
 
 
-number_of_coronal_bins=9
+
+
+
+
+
+
+coronal_bins=[0,200,500,1000,2000,3000,float('inf')]
+
+
+
 
 
 def put_data_to_bins_coronal():
 
 
-    csv_file_path = 'lesion_coronal_distribution_train_dataset.csv'
+    csv_file_path = '../../Data_Splitting/CSV/Coronal_Lesion_information_for_80_percent_of_3D_MRI_Subject.csv'
 
     data_bins_coronal={
         
-                'data_bin_1':[],'data_bin_2':[],'data_bin_3':[],'data_bin_4':[],'data_bin_5':[],
-                'data_bin_6':[],'data_bin_7':[],'data_bin_8':[],'data_bin_9':[]
+                'data_bin_1':[],'data_bin_2':[],'data_bin_3':[],'data_bin_4':[],'data_bin_5':[],'data_bin_6':[],
+               
 
             
             }
@@ -165,45 +182,6 @@ def put_data_to_bins_coronal():
 
 
 
-            elif coronal_bins[6] < sum_voxel <= coronal_bins[7]:
-                            
-                data_bins ['subject_name']= subject_name
-                data_bins ['slice']= slice
-                data_bins ['number_of_lesion']= number_of_lesion
-                data_bins ['sum_voxel']= sum_voxel
-                data_bins ['max_size']= max_size
-
-                data_bins_coronal['data_bin_7'].append(data_bins)
-
-
-
-
-
-            elif coronal_bins[7] < sum_voxel <= coronal_bins[8]:
-                            
-                data_bins ['subject_name']= subject_name
-                data_bins ['slice']= slice
-                data_bins ['number_of_lesion']= number_of_lesion
-                data_bins ['sum_voxel']= sum_voxel
-                data_bins ['max_size']= max_size
-
-                data_bins_coronal['data_bin_8'].append(data_bins)
-
-        
-
-
-            
-            else:
-
-                data_bins ['subject_name']= subject_name
-                data_bins ['slice']= slice
-                data_bins ['number_of_lesion']= number_of_lesion
-                data_bins ['sum_voxel']= sum_voxel
-                data_bins ['max_size']= max_size
-
-                data_bins_coronal['data_bin_9'].append(data_bins)
-    
-
     return num_rows,data_bins_coronal
 
 
@@ -220,36 +198,39 @@ print(number_of_coronal_slice)
 coronal_folds={
 
                 'axial_fold_1':[],'axial_fold_2':[],'axial_fold_3':[],'axial_fold_4':[],'axial_fold_5':[],
-                'axial_fold_6':[],'axial_fold_7':[],'axial_fold_8':[],'axial_fold_9':[],'axial_fold_10':[]
-
             
             }
 
 
 
-len_coronal_bin=9
-
-
-number_of_extra_slice=str(number_of_coronal_slice/10)[-1]
+len_coronal_bin=6
 
 number_of_fold=5
+
+number_of_extra_slice=str(number_of_coronal_slice/number_of_fold)[-1]
+
 
 
 bin_allowness_for_each_fold={
         
-                'data_bin_1':int(len(data_bins_coronal['data_bin_1'])/5),     'data_bin_2':int(len(data_bins_coronal['data_bin_2'])/5) ,       'data_bin_3':int(len(data_bins_coronal['data_bin_3'])/5),      'data_bin_4':int(len(data_bins_coronal['data_bin_4'])/5),  
-                                    'data_bin_5':int(len(data_bins_coronal['data_bin_5'])/5),              'data_bin_6':int(len(data_bins_coronal['data_bin_6'])/5),        
-                                      'data_bin_7':int(len(data_bins_coronal['data_bin_7'])/5),         'data_bin_8':int(len(data_bins_coronal['data_bin_8'])/5),  
-                                                    'data_bin_9':int(len(data_bins_coronal['data_bin_9'])/5)
-            
+                'data_bin_1':int(len(data_bins_coronal['data_bin_1'])/number_of_fold),  
+                'data_bin_2':int(len(data_bins_coronal['data_bin_2'])/number_of_fold) ,  
+                'data_bin_3':int(len(data_bins_coronal['data_bin_3'])/number_of_fold),  
+                'data_bin_4':int(len(data_bins_coronal['data_bin_4'])/number_of_fold),  
+                'data_bin_5':int(len(data_bins_coronal['data_bin_5'])/number_of_fold),      
+                'data_bin_6':int(len(data_bins_coronal['data_bin_6'])/number_of_fold),  
+                                                   
             }
 
 
 
 
-size_each_fold=int(len(data_bins_coronal['data_bin_1'])/5)+ int(len(data_bins_coronal['data_bin_2'])/5)+ int(len(data_bins_coronal['data_bin_3'])/5)+ int(len(data_bins_coronal['data_bin_4'])/5) \
-                + int(len(data_bins_coronal['data_bin_5'])/5)+ int(len(data_bins_coronal['data_bin_6'])/5)+ \
-                int(len(data_bins_coronal['data_bin_7'])/5)+ int(len(data_bins_coronal['data_bin_8'])/5)+ int(len(data_bins_coronal['data_bin_9'])/5)
+size_each_fold=int(len(data_bins_coronal['data_bin_1'])/number_of_fold)\
+    + int(len(data_bins_coronal['data_bin_2'])/number_of_fold)\
+    + int(len(data_bins_coronal['data_bin_3'])/number_of_fold)\
+    + int(len(data_bins_coronal['data_bin_4'])/number_of_fold) \
+    + int(len(data_bins_coronal['data_bin_5'])/number_of_fold)\
+    + int(len(data_bins_coronal['data_bin_6'])/number_of_fold)
 
 
 
@@ -258,8 +239,7 @@ bin_picked_for_each_fold={
                 'data_bin_1':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},'data_bin_2':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
                 'data_bin_3':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},'data_bin_4':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
                 'data_bin_5':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
-                'data_bin_6':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},'data_bin_7':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},
-                'data_bin_8':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0},'data_bin_9':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0}
+                'data_bin_6':{'fold_1':0,'fold_2':0,'fold_3':0,'fold_4':0,'fold_5':0}
             }
 
 
@@ -392,7 +372,7 @@ for fo in range(1,6):
 
     axial_slices=coronal_folds[f'axial_fold_{fo}']
     # CSV file path
-    csv_file_path = f'./coronal/lesion_distribution_coronal_fold_{fo}.csv'
+    csv_file_path = f'./Coronal_K_Fold_CSV/Coronal_Lesion_fold_0{fo}.csv'
 
     # Writing data to CSV file
     with open(csv_file_path, 'w', newline='') as csvfile:
