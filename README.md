@@ -154,7 +154,7 @@ graph TD;
 > The ranges used for categorizing the distribution of lesion volume voxels in 3D MRI subjects are represented as labels in the plot below.
 
 
-![Figure](./figures/Lesion_information_in_80_Percent_of_665_3D_Subjects.png) 
+![Figure](./Data_Splitting/figures/Lesion_information_in_80_Percent_of_665_3D_Subjects.png) 
 
 
 **The image below represents the lesion size distribution in 20 Percent of  655 3D subjects.**
@@ -162,7 +162,7 @@ graph TD;
 > [!IMPORTANT]
 > The ranges used for categorizing the distribution of lesion volume voxels in 3D MRI subjects are represented as labels in the plot below.
 
-![Figure](./figures/Lesion_information_in_20_Percent_of_665_3D_Subjects.png)
+![Figure](./Data_Splitting/figures/Lesion_information_in_20_Percent_of_665_3D_Subjects.png)
 
 
 
