@@ -225,15 +225,15 @@ We developed the code taking these two considerations into account to generate k
 
 
 
-**Distribution in All Sagittal plane**
+**Distribution in All Axial plane**
 
-![Figure](./Cross_Validation/figures/Lesion_information_in_Sagittal_Plane_of_80_Percent_of_665_3D_Subjects.png)
+![Figure](./Cross_Validation/figures/Lesion_information_in_Axial_Plane_of_80_Percent_of_665_3D_Subjects.png)
  
 
 
-**Distribution in one Fold Sagittal plane**
+**Distribution in one Fold Axial plane**
 
-![Figure](./Cross_Validation/figures/Lesion_information_in_First_Fold_of_Sagittal_Plane.png)
+![Figure](./Cross_Validation/figures/Lesion_information_in_First_Fold_of_Axial_Plane.png)
 
 
 
