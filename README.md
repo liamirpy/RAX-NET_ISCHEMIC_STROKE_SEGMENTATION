@@ -219,4 +219,27 @@ evaluating it on other slices of the same subject would not be valid. This would
 
 We developed the code taking these two considerations into account to generate k-fold cross-validation data. You can use this code for this dataset and your own projects.
 
+>![IMPORTANT]
+> After splitting data to K-fold, each fold has a same lesion distribution as the distribution of all data.
+> For instance, we display here the lesion distribution in all data in axial plane and one fold of axial plane.
+
+
+
+**Distribution in All Sagittal plane**
+
+![Figure](./Cross_Validation/figures/Lesion_information_in_Sagittal_Plane_of_80_Percent_of_665_3D_Subjects.png)
+ 
+
+
+**Distribution in one Fold Sagittal plane**
+
+![Figure](./Cross_Validation/figures/Lesion_information_in_First_Fold_of_Sagittal_Plane.png)
+
+
+
+
+
+
+
+
 For more details about this code and how to generate it, please refer to the [cross-validation](./Cross_Validation) directory.

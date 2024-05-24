@@ -16,10 +16,7 @@
         3- Finding the normal slice in each subject
         4- Adding the same number of normal slice near to lesion slice from same subject
 
-        ATTENTION:
-            - Not add the same slice from the subject to more than one fold (for ovelaping subject)
-
-
+      
 '''
 
 

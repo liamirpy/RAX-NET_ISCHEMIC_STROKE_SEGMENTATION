@@ -54,15 +54,45 @@ The results are saved in the following directory:
 
 # Lesion Distribution in All Axial Plane Subjects and First Fold
 
+**Distribution in All Axial plane**
 
+![Figure](./figures/Lesion_information_in_Axial_Plane_of_80_Percent_of_665_3D_Subjects.png)
+ 
+
+
+**Distribution in one Fold Axial plane**
+
+![Figure](./figures/Lesion_information_in_First_Fold_of_Axial_Plane.png)
 
 
 # Lesion Distribution in All Sagittal Plane Subjects and First Fold
+
+**Distribution in All Sagittal plane**
+
+![Figure](./figures/Lesion_information_in_Sagittal_Plane_of_80_Percent_of_665_3D_Subjects.png)
+ 
+
+
+**Distribution in one Fold Sagittal plane**
+
+![Figure](./figures/Lesion_information_in_First_Fold_of_Sagittal_Plane.png)
+
 
 
 
 
 # Lesion Distribution in All Coronal Plane Subjects and First Fold
+
+
+**Distribution in All Coronal plane**
+
+![Figure](./figures/Lesion_information_in_Coronal_Plane_of_80_Percent_of_665_3D_Subjects.png)
+ 
+
+
+**Distribution in one Fold Coronal plane**
+
+![Figure](./figures/Lesion_information_in_First_Fold_of_Coroanl_Plane.png)
 
 
 
@@ -72,19 +102,27 @@ The results are saved in the following directory:
 
 # K_Fold For Normal Slices
 
-The previous section we just splitted the data for k-fold cross validation for lesion slices. 
-In this section we also spliited the normal slices (without lesion) for k-fold cross validtion
+In the previous section, we split the data for k-fold cross-validation for lesion slices. In this section, we also split the normal slices (without lesions) for k-fold cross-validation.
 
-the approch is : 
+The approach is:
 
-
-
-
-
-
+1. First, we read each fold for lesions (CSV file).
+2. Find the subjects that are in those folds.
+3. Find the normal slices in each subject.
+4. Add the same number of normal slices near the lesion slices from the same subject.
 
 
 
 
 
+
+
+To run the code, execute the script below:
+
+``` 
+cd K_Fold_Normal
+
+python3 axial_sagittal_coronal_k_fold_normal.py
+
+```
 
