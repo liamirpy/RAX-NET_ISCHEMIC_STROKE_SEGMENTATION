@@ -53,7 +53,7 @@ The results are saved in the following directory:
 > For clarity, we displayed the lesion distribution for all training subjects and the first fold.
 
 > [!NOTE]
-> The Mann–Whitney U test(https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test)  is a nonparametric test of the null hypothesis. We used this test 
+> [The Mann–Whitney U test](https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test)  is a nonparametric test of the null hypothesis. We used this test 
 > For represent the distribution similarity after cross validation. For all of them P_value > 0.05.
 
 ** You can see the result by executive the MWW_test.py**

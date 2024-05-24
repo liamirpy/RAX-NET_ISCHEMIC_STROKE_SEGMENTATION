@@ -225,7 +225,7 @@ We developed the code taking these two considerations into account to generate k
 
 
 > [!NOTE]
-> The Mann–Whitney U test(https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test)  is a nonparametric test of the null hypothesis. We used this test 
+> [The Mann–Whitney U test](https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test)  is a nonparametric test of the null hypothesis. We used this test 
 > For represent the distribution similarity after cross validation. For all of them P_value > 0.05.
 
 
