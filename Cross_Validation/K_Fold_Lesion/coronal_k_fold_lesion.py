@@ -41,7 +41,6 @@ import pandas as pd
 
 import random
 
-random.seed(42)
 
 
 ranges_in_Coronal_3D_Subject = [

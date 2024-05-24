@@ -219,10 +219,19 @@ evaluating it on other slices of the same subject would not be valid. This would
 
 We developed the code taking these two considerations into account to generate k-fold cross-validation data. You can use this code for this dataset and your own projects.
 
->![IMPORTANT]
+> [!IMPORTANT]
 > After splitting data to K-fold, each fold has a same lesion distribution as the distribution of all data.
 > For instance, we display here the lesion distribution in all data in axial plane and one fold of axial plane.
 
+
+> [!NOTE]
+> The Mann–Whitney U test(https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test)  is a nonparametric test of the null hypothesis. We used this test 
+> For represent the distribution similarity after cross validation. For all of them P_value > 0.05.
+
+
+*
+
+For the rest of plane please refere to cross-validation directory.
 
 
 **Distribution in All Axial plane**

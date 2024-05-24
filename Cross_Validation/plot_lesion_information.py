@@ -43,7 +43,7 @@ class plot_lesion_information:
             plt.scatter(x_values, data[mask],color=color, label=f'{start} to {end} Pixels (N={count})',s=20,linewidths=0.5)
 
         # Set the labels for the axes
-        plt.xlabel('Lesion Size Distribution in the First Fold of the Axial Plane',fontsize=20)
+        plt.xlabel('Lesion Size Distribution in the Single Fold of the Axial Plane',fontsize=20)
         plt.ylabel('volume Pixels', fontsize=20)
 
         # Display y-axis scale values
@@ -95,7 +95,7 @@ class plot_lesion_information:
             plt.scatter(x_values, data[mask],color=color, label=f'{start} to {end} Pixels (N={count})',s=20,linewidths=0.5)
 
         # Set the labels for the axes
-        plt.xlabel('Lesion Size Distribution in the First Fold of the Sagittal Plane',fontsize=20)
+        plt.xlabel('Lesion Size Distribution in Single Fold of the Sagittal Plane',fontsize=20)
         plt.ylabel('volume Pixels', fontsize=20)
 
         # Display y-axis scale values
@@ -151,7 +151,7 @@ class plot_lesion_information:
             plt.scatter(x_values, data[mask],color=color, label=f'{start} to {end} Pixels (N={count})',s=20,linewidths=0.5)
 
         # Set the labels for the axes
-        plt.xlabel('Lesion Size Distribution in the First Fold of the Coronal Plane',fontsize=20)
+        plt.xlabel('Lesion Size Distribution in Single Fold of the Coronal Plane',fontsize=20)
         plt.ylabel('volume Pixels', fontsize=20)
 
         plt.yticks()  # This will keep the y-axis scale values
@@ -182,11 +182,11 @@ ranges_in_axial_3D_Subject = [
 
 
 ranges_in_Sagittal_3D_Subject = [
-    (0, 1000, 'r'), 
-    (1000, 2000, 'indigo'), 
-    (2000, 3000, 'gold'), 
-    (3000, 5000, 'b'), 
-    # (5000, 7000, 'chocolate'), 
+    (0, 500, 'r'), 
+    (500, 1000, 'indigo'), 
+    (1000, 2000, 'gold'), 
+    (2000, 3000, 'b'), 
+    (3000, 5000, 'chocolate'), 
     (5000, float('inf'), 'black'), 
     
 ]
@@ -211,7 +211,7 @@ ranges_in_Coronal_3D_Subject = [
 
 
 
-axial_csv='./K_Fold_Lesion/Axial_K_Fold_CSV/Axial_Lesion_fold_01.csv'
+axial_csv='./K_Fold_Lesion/Axial_K_Fold_CSV/Axial_Lesion_fold_03.csv'
 
 
 
@@ -237,7 +237,7 @@ plot.lesion_information_in_one_fold_sagittal(sagittal_csv,ranges_in_Sagittal_3D_
 
 
 
-coronal_csv='./K_Fold_Lesion/Coronal_K_Fold_CSV/Coronal_Lesion_fold_01.csv'
+coronal_csv='./K_Fold_Lesion/Coronal_K_Fold_CSV/Coronal_Lesion_fold_03.csv'
 
 
 

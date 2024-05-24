@@ -40,7 +40,6 @@ import pandas as pd
 
 import random
 
-random.seed(42)
 
 
 axial_bins=[0,200,500,1000,2000,3000,float('inf')]

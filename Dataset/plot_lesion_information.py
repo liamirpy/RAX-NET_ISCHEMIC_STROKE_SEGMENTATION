@@ -241,11 +241,11 @@ ranges_in_axial_3D_Subject = [
 
 
 ranges_in_Sagittal_3D_Subject = [
-    (0, 1000, 'r'), 
-    (1000, 2000, 'indigo'), 
-    (2000, 3000, 'gold'), 
-    (3000, 5000, 'b'), 
-    # (5000, 7000, 'chocolate'), 
+    (0, 500, 'r'), 
+    (500, 1000, 'indigo'), 
+    (1000, 2000, 'gold'), 
+    (2000, 3000, 'b'), 
+    (3000, 5000, 'chocolate'), 
     (5000, float('inf'), 'black'), 
     
 ]

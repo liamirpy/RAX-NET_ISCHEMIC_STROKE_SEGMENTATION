@@ -52,6 +52,14 @@ The results are saved in the following directory:
 > The lesion distribution in all axial/sagittal/coronal plane subjects is the same as the lesion distribution in each fold.
 > For clarity, we displayed the lesion distribution for all training subjects and the first fold.
 
+> [!NOTE]
+> The Mann–Whitney U test(https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test)  is a nonparametric test of the null hypothesis. We used this test 
+> For represent the distribution similarity after cross validation. For all of them P_value > 0.05.
+
+** You can see the result by executive the MWW_test.py**
+
+
+
 # Lesion Distribution in All Axial Plane Subjects and First Fold
 
 **Distribution in All Axial plane**
@@ -60,7 +68,7 @@ The results are saved in the following directory:
  
 
 
-**Distribution in one Fold Axial plane**
+**Distribution in Single Fold Axial plane**
 
 ![Figure](./figures/Lesion_information_in_First_Fold_of_Axial_Plane.png)
 
@@ -74,7 +82,7 @@ The results are saved in the following directory:
  
 
 
-**Distribution in one Fold Sagittal plane**
+**Distribution in Single Fold Sagittal plane**
 
 ![Figure](./figures/Lesion_information_in_First_Fold_of_Sagittal_Plane.png)
 
@@ -91,7 +99,7 @@ The results are saved in the following directory:
  
 
 
-**Distribution in one Fold Coronal plane**
+**Distribution in Single Fold Coronal plane**
 
 ![Figure](./figures/Lesion_information_in_First_Fold_of_Coronal_Plane.png)
 
