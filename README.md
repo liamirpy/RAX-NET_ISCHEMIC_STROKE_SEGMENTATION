@@ -203,7 +203,7 @@ In this section, we developed the code to use the CSV files generated in the pre
  Additionally, we converted the 80% of the data into 2D slices for each plane: axial, sagittal, and coronal.
 
 
-# Cross-Validation 
+# [Cross-Validation](./Cross_Validation)
 
 For evaluating the model, cross-validation is important. We developed k-fold cross-validation where we split the data into k folds and trained the model k times.
  Each time, we trained the model on k-1 folds and evaluated the model on the remaining 1 fold.
@@ -219,4 +219,4 @@ evaluating it on other slices of the same subject would not be valid. This would
 
 We developed the code taking these two considerations into account to generate k-fold cross-validation data. You can use this code for this dataset and your own projects.
 
-For more details about this code and how to generate it, please refer to the cross-validation directory.
+For more details about this code and how to generate it, please refer to the [cross-validation](./Cross_Validation) directory.

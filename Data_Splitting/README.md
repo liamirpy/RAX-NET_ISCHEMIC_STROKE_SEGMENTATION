@@ -33,6 +33,13 @@ We have also generated CSV files for the axial, sagittal, and coronal planes for
 
 The results are saved in the following CSV files:
 
+- Axial_Lesion_information_for_80_percent_of_3D_MRI_Subject.csv
+
+- Sagittal_Lesion_information_for_80_percent_of_3D_MRI_Subject.csv
+
+- Coronal_Lesion_information_for_80_percent_of_3D_MRI_Subject.csv
+
+
 
 ``` 
 
