@@ -67,9 +67,10 @@ The results are saved in the following directory:
 
 # Lesion Distribution in All Sagittal Plane Subjects and First Fold
 
+
 **Distribution in All Sagittal plane**
 
-![Figure](./figures/Lesion_information_in_Sagittal_Plane_of_80_Percent_of_665_3D_Subjects.png)
+![Figure](./figures/Lesion_information_in_Sagittal_Plane_in_80_Percent_of_665_3D_Subjects.png)
  
 
 
@@ -92,7 +93,7 @@ The results are saved in the following directory:
 
 **Distribution in one Fold Coronal plane**
 
-![Figure](./figures/Lesion_information_in_First_Fold_of_Coroanl_Plane.png)
+![Figure](./figures/Lesion_information_in_First_Fold_of_Coronal_Plane.png)
 
 
 
