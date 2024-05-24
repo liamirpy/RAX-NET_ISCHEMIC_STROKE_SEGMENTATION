@@ -141,7 +141,7 @@ def put_data_to_bins_axial():
                 data_bins_axial['data_bin_4'].append(data_bins)
 
             
-            elif axial_bins[3] < sum_voxel <= axial_bins[5]:
+            elif axial_bins[4] < sum_voxel <= axial_bins[5]:
                             
                 data_bins ['subject_name']= subject_name
                 data_bins ['slice']= slice
@@ -182,7 +182,7 @@ print(number_of_axial_slice)
 
 axial_folds={
 
-                'axial_fold_1':[],'axial_fold_2':[],'axial_fold_3':[],'axial_fold_4':[],'axial_fold_5':[]
+                'axial_fold_1':[],'axial_fold_2':[],'axial_fold_3':[],'axial_fold_4':[],'axial_fold_5':[],'axial_fold_6':[]
                 
 
             
@@ -215,7 +215,8 @@ size_each_fold= int(len(data_bins_axial['data_bin_1'])/5)\
         +int(len(data_bins_axial['data_bin_2'])/5)\
         +int(len(data_bins_axial['data_bin_3'])/5) \
         +int(len(data_bins_axial['data_bin_4'])/5) \
-        + int(len(data_bins_axial['data_bin_5'])/5)
+        + int(len(data_bins_axial['data_bin_5'])/5)\
+        + int(len(data_bins_axial['data_bin_6'])/5)
 
 
 
@@ -348,7 +349,7 @@ while( sum_fold < size_each_fold * number_of_fold ):
         
 
             
-            if (tt > 60 and (bin_picked_for_each_fold[f'data_bin_{bins_intialization}'][f'fold_{empty_fold}'] ) == bin_allowness_for_each_fold[f'data_bin_{bins_intialization}']) :
+            if ((bin_picked_for_each_fold[f'data_bin_{bins_intialization}'][f'fold_{empty_fold}'] ) == bin_allowness_for_each_fold[f'data_bin_{bins_intialization}']) :
                 break
 
 

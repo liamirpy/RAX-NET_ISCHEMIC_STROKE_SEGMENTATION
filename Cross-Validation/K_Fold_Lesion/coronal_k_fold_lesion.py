@@ -158,7 +158,7 @@ def put_data_to_bins_coronal():
                 data_bins_coronal['data_bin_4'].append(data_bins)
 
             
-            elif coronal_bins[3] < sum_voxel <= coronal_bins[5]:
+            elif coronal_bins[4] < sum_voxel <= coronal_bins[5]:
                             
                 data_bins ['subject_name']= subject_name
                 data_bins ['slice']= slice
@@ -353,7 +353,7 @@ while( sum_fold < size_each_fold * 5 ):
             #     break
 
 
-            if (tt > 60 and (bin_picked_for_each_fold[f'data_bin_{bins_intialization}'][f'fold_{empty_fold}'] ) == bin_allowness_for_each_fold[f'data_bin_{bins_intialization}']) :
+            if ((bin_picked_for_each_fold[f'data_bin_{bins_intialization}'][f'fold_{empty_fold}'] ) == bin_allowness_for_each_fold[f'data_bin_{bins_intialization}']) :
                 break
 
 
