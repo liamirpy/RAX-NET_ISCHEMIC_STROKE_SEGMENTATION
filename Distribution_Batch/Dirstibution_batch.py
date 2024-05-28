@@ -1676,37 +1676,29 @@ class DistributionBatch:
 
 
 
+
+
+
         validation_lesion_batch_csv=pd.read_csv(f'./{save_directory}/Validation_lesion_batches.csv')
 
-
-
-        number_of_data=len(validation_lesion_batch_csv)
-
-
-        df = pd.read_csv(f'{save_directory}/Validation_normal_batches.csv')
+        number_of_batch_in_normal_csv=validation_lesion_batch_csv['batch'].max()
 
 
 
-        selected_rows = df.head(number_of_data)
+
+        df = pd.read_csv(f'{save_directory}/Train_normal_batches.csv')
 
 
-        concatenated_df = pd.concat([validation_lesion_batch_csv, selected_rows], ignore_index=True)
+        filtered_df = df[df['batch'] <= number_of_batch_in_normal_csv]
+
+
+        # # Print or do further processing with the filtered DataFrame
+        concatenated_lesion_normal = pd.concat([filtered_df, validation_lesion_batch_csv], ignore_index=False)
 
         # # Save the concatenated DataFrame to a new CSV file
-        concatenated_df.to_csv(f'./{save_directory}/Validation_lesion_normal_batches.csv', index=False)
+        concatenated_lesion_normal.to_csv(f'{save_directory}/Validation_lesion_normal_batches.csv')
 
 
-
-
-
-
-
-
-
-
-
-
-        
 
 
         print("It's done. @Liamirpy")
