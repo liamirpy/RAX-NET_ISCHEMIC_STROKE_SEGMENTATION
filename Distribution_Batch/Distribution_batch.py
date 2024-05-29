@@ -1708,77 +1708,32 @@ class DistributionBatch:
 
 
 
+parser.add_argument('-bs', '--batch_size', type=int, help='Batch size.')
+parser.add_argument('-lcsv', '--lesion_csv_dir', type=str, help='Directory containing CSV files of lesion slices (format: ..._fold_01.csv).')
 
+parser.add_argument('-ncsv', '--normal_csv_dir', type=str, help='Directory containing CSV files of normal slices (format: ..._fold_01.csv).')
+parser.add_argument('-col', '--column', type=str, help='Column in the CSV file to base operations on.')
+parser.add_argument('-vf', '--val_fold', type=int, help='Validation fold number.')
+parser.add_argument('-bins', '--bins', type=str, help='Bins to be used for data distribution.')
+parser.add_argument('-aug', '--augment', type=str, help='Enable data augmentation to balance distribution (True or False).')
+parser.add_argument('-auglist', '--augment_list', type=str, help='List of augmentation methods to apply.')
+parser.add_argument('-rdb', '--repeat_diff_batches', type=str, help='Allow repeated data across different batches (True or False).')
+parser.add_argument('-rsb', '--repeat_same_batch', type=str, help='Allow repeated data within a single batch (True or False).')
+parser.add_argument('-sd', '--save_dir', type=str, help='Directory to save the output CSV.')
 
-parser.add_argument('-bs','--batch_size', type=str, help='Batch size ')
+args = parser.parse_args
 
-parser.add_argument('-ld','--lesion_folds_csv_directory', type=str, help='The directory of folder that includes all the CSV files OF LESION SLICES- The CSV files should ended in format of ..._fold_01.csv ')
-
-parser.add_argument('-nd','--normal_folds_csv_directory', type=str, help='The directory of folder that includes all the CSV files of NORMAL SLICES- The CSV files should ended in format of ..._fold_01.csv ')
-
-
-
-parser.add_argument('-c','--based_on_column', type=str, help='Based on which coloum of CSV ')
-
-parser.add_argument('-vf','--validation_fold', type=str, help='Which fold consider as a validation fold')
-
-parser.add_argument('-bins','--bins', type=str, help='The bins that you want to consider as a distribution of data')
-
-
-parser.add_argument('-ag','--data_augmentation_to_balance_distribution', type=str, help='Do you want to agument a data? True or False')
-
-
-
-parser.add_argument('-aglist','--augmentation_list', type=str, help='The list of augmentation approach that you want to apply ')
-
-parser.add_argument('-re1','--allowed_reapeted_data_in_different_batches', type=str, help='Is it alowed the batches have a repeated data in different batches(not_same)? True or False')
-
-parser.add_argument('-re2','--allowed_reapeted_data_in_single_batch', type=str, help='Is it alowed the batches have a repeated data in their own batches? True or False ')
-
-
-
-parser.add_argument('-sd','--save_csv_directory', type=str, help='The directory that you want to save  ')
 
 
 
 args = parser.parse_args()
 
+args.augment = args.augment == 'True'
+args.repeat_diff_batches = args.repeat_diff_batches == 'True'
+args.repeat_same_batch = args.repeat_same_batch == 'True'
 
-
-
-if args.data_augmentation_to_balance_distribution=='False':
-    args.data_augmentation_to_balance_distribution=False
-
-if args.data_augmentation_to_balance_distribution=='True':
-    args.data_augmentation_to_balance_distribution=True
-
-
-if args.allowed_reapeted_data_in_different_batches=='False':
-    args.allowed_reapeted_data_in_different_batches=False
-    
-if args.allowed_reapeted_data_in_different_batches=='True':
-    args.allowed_reapeted_data_in_different_batches=True
-
-
-
-if args.allowed_reapeted_data_in_single_batch=='False':
-    args.allowed_reapeted_data_in_single_batch=False
-    
-if args.augmentation_list=='None':
-    args.augmentation_list=''
-
-# if args.augmentation_list!='None':
-#     args.augmentation_list= ast.literal_eval(args.augmentation_list)
-
-
-
-
-
-
-
-
-
-
+if args.augment_list == 'None':
+    args.augment_list = ''
 
 if args.bins:
     args.bins = ast.literal_eval(args.bins)
@@ -1787,42 +1742,29 @@ if args.bins:
 
 
 
+DistributionBatch(
+    batch_size=args.batch_size,
 
+    lesion_folds_csv_directory=args.lesion_csv_dir,
 
+    normal_folds_csv_directory=args.normal_csv_dir,
 
+    based_on_which_column=args.column,
 
+    validation_fold=[args.val_fold],
 
+    bins=args.bins,
 
-h=DistributionBatch(
+    data_augmentation_to_balance_distribution=args.augment,
 
+    allowed_reapeted_data_in_different_batches=args.repeat_diff_batches,
 
-                    batch_size=int(args.batch_size),
-                    
-                    lesion_folds_csv_directory=args.lesion_folds_csv_directory,
+    allowed_reapeted_data_in_single_batch=args.repeat_same_batch,
 
-                    normal_folds_csv_directory=args.normal_folds_csv_directory,
+    augmentation_list=args.augment_list,
 
-                    based_on_which_column=args.based_on_column,
+    save_csv=True,
 
-                    validation_fold=[int(args.validation_fold)],
-
-                    bins=args.bins,
-
-                    data_augmentation_to_balance_distribution=args.data_augmentation_to_balance_distribution,
-
-
-                    allowed_reapeted_data_in_different_batches=args.allowed_reapeted_data_in_different_batches,
-
-
-                    allowed_reapeted_data_in_single_batch=args.allowed_reapeted_data_in_single_batch,
-
-
-                    augmentation_list=args.augmentation_list,
-
-
-                    save_csv=True,
-
-
-                    save_csv_directory= args.save_csv_directory
-                    
-                    )
+    save_csv_directory=args.save_dir
+    
+)

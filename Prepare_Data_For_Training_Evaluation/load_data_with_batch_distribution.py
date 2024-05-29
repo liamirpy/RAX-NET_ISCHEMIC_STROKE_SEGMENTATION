@@ -186,7 +186,7 @@ def load_data(csv_directory,data_directory,fold=1):
             mri_numpy =normalize_to_255(mri_numpy)
 
 
-            train_data_mri[batch-1,in_batch,6:6+197,3:3+233,0] = mri_numpy
+            validation_data_mri[batch-1,in_batch,6:6+197,3:3+233,0] = mri_numpy
 
             
 
@@ -199,7 +199,7 @@ def load_data(csv_directory,data_directory,fold=1):
             mask_numpy=np.where(mask_numpy > 0, 1, 0)
 
 
-            train_data_mask[batch-1,in_batch,6:6+197,3:3+233,0] = mask_numpy
+            validation_data_mask[batch-1,in_batch,6:6+197,3:3+233,0] = mask_numpy
 
             in_batch +=1
 

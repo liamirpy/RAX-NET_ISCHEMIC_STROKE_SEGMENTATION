@@ -259,7 +259,8 @@ For more details about this code and how to generate it, please refer to the [cr
 
 
 
-# [Distribution-Batch](./Distribution-Batch)
+# [Distribution-Batch](./Distribution)y
+Batch)
 
 In the last section, we generated CSV files for K-fold cross-validation. 
 To train the model, we train it on K-1 folds and test it on one fold.
@@ -277,9 +278,7 @@ In this part, we do not shuffle the data for batch splitting; instead, we design
  The approach is to split the data based on the lesion distribution of the K-1 fold of training. 
 This means that based on the lesion distribution of the training data, we design the batches to ensure that each batch has the same distribution of input data.
 
-For more details, please refer to the Distribution Batch directory.
-
-
+For more details, please refer to the [Distribution Batch](./Distribution_Batch) directory.
 
 
 
