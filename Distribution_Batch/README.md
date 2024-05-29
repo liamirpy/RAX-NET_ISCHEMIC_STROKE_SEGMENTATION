@@ -29,6 +29,7 @@ The rationale behind this approach are :
  This approach ensures that the model receives a representative sample of lesion types in each batch, facilitating comprehensive learning and generalization.
 
 2. **Improved Optimization:**
+
 Training the model on batches with lesion mask distributions aligned with the entire dataset enhances optimization.
 By providing batches that reflect the diversity of lesion instances present in the data, 
 the model's optimizer can more effectively navigate the parameter space, leading to smoother convergence and improved performance.
@@ -91,11 +92,14 @@ Example :['v-flip','rotation','h-flip']
 **-rsb, --repeat_same_batch:** Boolean flag indicating whether to allow repeated data within a single batch. Accepts True or False.
 
 **-sd, --save_dir:** Path to the directory where the output CSV files will be saved. You have 6 output :
+
 	1- Train_lesion_batches : Desing the batches for lesion slices for the training data 
+
 	2- Train_normal_batches : Desing the batches for normal slices for the normal data 
+
  	3- Train_lesion_normal_batches : Combination of lesion and normal slices (1 and 2)
 	
-	The other 3 CSV file are for the validation data 
+	- The other 3 CSV file are for the validation data 
 
 
 
