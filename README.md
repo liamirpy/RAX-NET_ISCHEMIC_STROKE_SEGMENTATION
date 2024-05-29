@@ -259,8 +259,7 @@ For more details about this code and how to generate it, please refer to the [cr
 
 
 
-# [Distribution-Batch](./Distribution)y
-Batch)
+# [Distribution-Batch](./Distribution)
 
 In the last section, we generated CSV files for K-fold cross-validation. 
 To train the model, we train it on K-1 folds and test it on one fold.
@@ -277,6 +276,43 @@ To train the model, we define the batch size, and the training data is split int
 In this part, we do not shuffle the data for batch splitting; instead, we design our own batches.
  The approach is to split the data based on the lesion distribution of the K-1 fold of training. 
 This means that based on the lesion distribution of the training data, we design the batches to ensure that each batch has the same distribution of input data.
+
+
+### Why Distribution Batch? 
+ 
+
+In our segmentation model design, our primary aim is to train the model on batches that mirror the overall distribution of lesion masks in the entire dataset.
+ Instead of enforcing a uniform distribution within each batch, our strategy focuses on ensuring that the distribution of lesion masks in each batch closely resembles
+ that of the entire dataset.
+
+
+The specific objective is to maintain consistency in the distribution of lesion masks across batches during training.
+ Each batch processed by the model contains a proportional representation of different types of lesions, preserving the overall distribution observed in the entire dataset.
+
+The rationale behind this approach are :
+
+
+
+1. **Preserving Data Characteristics:**
+ 
+ By aligning the distribution of lesion masks in each batch with that of the entire dataset, we aim to preserve the
+ inherent characteristics and diversity of lesion instances present in the data.
+ This approach ensures that the model receives a representative sample of lesion types in each batch, facilitating comprehensive learning and generalization.
+
+2. **Improved Optimization:**
+
+Training the model on batches with lesion mask distributions aligned with the entire dataset enhances optimization.
+By providing batches that reflect the diversity of lesion instances present in the data, 
+the model's optimizer can more effectively navigate the parameter space, leading to smoother convergence and improved performance.
+
+3. **Optimizing Batch Normalization Performance:**
+
+Batch normalization layers rely on consistent batch statistics to normalize activations within the network. 
+By maintaining a distribution of lesion masks in each batch that mirrors the overall dataset distribution,
+ we enable batch normalization to accurately estimate batch statistics and effectively regulate the flow of information through the model.
+
+
+
 
 For more details, please refer to the [Distribution Batch](./Distribution_Batch) directory.
 
