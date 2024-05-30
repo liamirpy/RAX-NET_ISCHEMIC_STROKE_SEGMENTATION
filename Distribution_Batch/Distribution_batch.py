@@ -28,6 +28,8 @@ import argparse
 import random
 import ast
 
+random.seed(42)
+
 parser = argparse.ArgumentParser()
 
 

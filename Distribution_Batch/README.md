@@ -102,6 +102,10 @@ Example :['v-flip','rotation','h-flip']
 	- The other 3 CSV file are for the validation data 
 
 
+> [!CAUTION]
+> We also applied the distribution batch for validation data because we aim to evaluate the model during the training progress. The evaluation should mimic the same conditions as the training data. However, for the final evaluation of the model, we predict each sample separately.
 
+> [!NOTE]
+> Based on the selected validation fold, a folder will be created with the name "fold_{validation_fold}" in the output directory after the code execution.
 
 

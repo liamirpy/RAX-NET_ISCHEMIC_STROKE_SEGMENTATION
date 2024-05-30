@@ -43,19 +43,6 @@ import random
 
 
 
-ranges_in_Coronal_3D_Subject = [
-    (0, 200, 'r'), 
-    (200, 500, 'indigo'), 
-    (500, 1000, 'gold'), 
-    (1000, 2000, 'b'), 
-    (2000, 3000, 'chocolate'), 
-    (3000, float('inf'), 'black'), 
-]
-
-
-
-
-
 
 
 
