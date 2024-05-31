@@ -71,7 +71,7 @@ class DistributionBatch:
         ## It should be a name of column in the csv file
         self.based_on=based_on_which_column
 
-        self.batch_size= batch_size
+        self.batch_size= int(batch_size /2)
 
         self.normal_csv_folder_directory=normal_folds_csv_directory
 
@@ -1635,8 +1635,9 @@ class DistributionBatch:
 
 
 
-        normal_Train_concatenated['batch'] = normal_Train_concatenated.index // int(args.batch_size) + 1
+        normal_Train_concatenated['batch'] = normal_Train_concatenated.index // int(self.batch_size) + 1
 
+        validation_concatenated['batch'] = validation_concatenated.index // int(self.batch_size) + 1
 
 
         validation_concatenated.to_csv(f'{save_directory}/Validation_normal_batches.csv', index=False)
@@ -1688,7 +1689,7 @@ class DistributionBatch:
 
 
 
-        df = pd.read_csv(f'{save_directory}/Train_normal_batches.csv')
+        df = pd.read_csv(f'{save_directory}/Validation_normal_batches.csv')
 
 
         filtered_df = df[df['batch'] <= number_of_batch_in_normal_csv]

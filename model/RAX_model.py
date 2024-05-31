@@ -556,19 +556,19 @@ op=keras.optimizers.AdamW(
 
 
 
-train_data_mri = np.load('../Prepare_Data_For_Training_Evaluation/train_data_mri_fold_1.npy').astype(np.float32)
+train_data_mri = np.load('../Load_Data_with_Distribution_Batch/train_data_mri_fold_1.npy').astype(np.float32)
 # train_data_mri= np.floor(train_data_mri).astype(np.float32)
 # 
-train_data_mask=np.load('../Prepare_Data_For_Training_Evaluation/train_data_mask_fold_1.npy').astype(np.float32)
+train_data_mask=np.load('../Load_Data_with_Distribution_Batch/train_data_mask_fold_1.npy').astype(np.float32)
 
 
 
 
-validation_data_mri=np.load('../Prepare_Data_For_Training_Evaluation/validation_data_mri_fold_1.npy').astype(np.float32)
+validation_data_mri=np.load('../Load_Data_with_Distribution_Batch/validation_data_mri_fold_1.npy').astype(np.float32)
 
 # validation_data_mri= np.floor(validation_data_mri).astype(np.float32)
 
-validation_data_mask=np.load('../Prepare_Data_For_Training_Evaluation/validation_data_mask_fold_1.npy').astype(np.float32)
+validation_data_mask=np.load('../Load_Data_with_Distribution_Batch/validation_data_mask_fold_1.npy').astype(np.float32)
 
 
 model.compile(optimizer=op, loss=dice_loss, metrics=['accuracy',dice_coef])
@@ -627,7 +627,7 @@ for epoch in range(number_of_epoch):
 
         if batch == train_data_mask.shape[0] -1 :
                     
-            loss,acc,dice=model.train_on_batch( train_data_mri[batch,:,:,:,:],train_data_mask[batch,:,:,:,:] , sample_weight=None, class_weight=None, return_dict=True)
+            loss,acc,dice=model.train_on_batch( train_data_mri[batch,:,:,:,:],train_data_mask[batch,:,:,:,:] , sample_weight=None, class_weight=None, return_dict=False)
 
             all_val_loss=[]
             all_val_acc=[]

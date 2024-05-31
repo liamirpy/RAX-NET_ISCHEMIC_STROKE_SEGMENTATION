@@ -319,7 +319,14 @@ For more details, please refer to the [Distribution Batch](./Distribution_Batch)
 
 
 
+# [Data Preparation] (./Data_Preparation)  
 
+In previous section we categorized data based on the distribution of data in batches for the reason that we dissuced in previous section.
+in This section we developed the code for read the data based on that categorized batches for training model and generate a numpy arry for all 
+data to load the data for training and evaluation model easily .
+Also, we should mention that all data after loading normilzed between 0 to 255 as float and put it in numpy arry.
+
+for more details, please refer to the [Data Preparation] (./Data_prepration).
 
 
 
