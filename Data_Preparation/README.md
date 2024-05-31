@@ -13,4 +13,33 @@ The approach is simple: first, read the CSV file, and then read the data based o
 Place all the data with the same batch number near each other in a numpy array.
  The numpy array has a shape of (maximum_batch, batch_size, image.shape[0], image.shape[1], image.shape[2], 1).
 
-Becasue of the
+
+
+
+```
+python3 load_data_with_batch_distribution.py \
+	-tcsv ../Distribution_Batch/Coronal_Batches_CSV/fold_2/Train_lesion_normal_batches.csv \
+	-vcsv ../Distribution_Batch/Coronal_Batches_CSV/fold_2/Validation_lesion_normal_batches.csv \	
+	-dd ../Moving_Converting_Data/coronal_2D \
+	-p c \	
+	-fold 2 \	
+	-sd ./Coronal
+	
+```
+**-tcsv, --train_csv_directory:** The path to the Train CSV file that was generated before (includes normal and lesion data).
+
+**-vcsv, --validation_csv_directory:** The path to the Validation CSV file.
+
+**-dd, --data:** Data directory.
+
+**-p, --plane:** The plane (Axial, Sagittal, or Coronal).
+
+**-fold:** Just for creating the folder.
+
+**-sd, --save_directory:** The directory for saving the result.
+
+The output consists of 4 numpy arrays in .npy format: 2 for MRI data (training and validation) and their corresponding masks.
+
+** Due to the size of data we did not includes the data here**
+
+

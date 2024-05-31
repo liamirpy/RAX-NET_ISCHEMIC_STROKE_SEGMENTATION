@@ -412,7 +412,7 @@ class load_data:
 
                 mri_numpy =self.normalize_to_255(mri_numpy)
 
-                self.train_data_mri[batch-1,in_batch,9:9+189,3:3+233,0] = mri_numpy
+                self.train_data_mri[batch-1,in_batch,5:5+197,9:9+189,0] = mri_numpy
 
                 
 
@@ -424,7 +424,7 @@ class load_data:
                 mask_numpy=np.where(mask_numpy > 0, 1, 0)
 
 
-                self.train_data_mask[batch-1,in_batch,9:9+189,3:3+233,0] = mask_numpy
+                self.train_data_mask[batch-1,in_batch,5:5+197,9:9+189,0] = mask_numpy
 
                 in_batch +=1
 
@@ -481,7 +481,7 @@ class load_data:
                 mri_numpy =self.normalize_to_255(mri_numpy)
 
 
-                self.validation_data_mri[batch-1,in_batch,9:9+189,3:3+233,0] = mri_numpy
+                self.validation_data_mri[batch-1,in_batch,5:5+197,9:9+189,0] = mri_numpy
 
                 
 
@@ -494,7 +494,7 @@ class load_data:
                 mask_numpy=np.where(mask_numpy > 0, 1, 0)
 
 
-                self.validation_data_mask[batch-1,in_batch,9:9+189,3:3+233,0] = mask_numpy
+                self.validation_data_mask[batch-1,in_batch,5:5+197,9:9+189,0] = mask_numpy
 
                 in_batch +=1
     
