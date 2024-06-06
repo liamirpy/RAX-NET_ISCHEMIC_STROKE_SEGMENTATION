@@ -123,7 +123,7 @@ class Statistics:
 
         floss = keras.losses.BinaryFocalCrossentropy(
             apply_class_balancing=True,
-            alpha=0.25,
+            alpha=0.80,
             gamma=2,
             from_logits=False,
             label_smoothing=0.0,

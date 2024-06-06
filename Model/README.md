@@ -1,7 +1,27 @@
-#MODEL 
+# MODEL 
 
 
-In this section, we have included all the code for designing and training the model. The model is depicted below, along with the added depthwise convolution.
+In this section, we have included all the code for designing and training the model. The model is depicted below, along with the added Seperable convolution.
+
+
+
+
+
+
+
+
+
+## Seperable Convolution
+
+
+![Figure](./figures/Seperable_Convolution.png)
+
+
+
+
+
+
+
 
 This directory contains the following code files:
 
