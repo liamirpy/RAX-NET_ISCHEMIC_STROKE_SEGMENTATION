@@ -350,10 +350,16 @@ For more details about the code and model, please refer to the [Model](./Model) 
 
 
 
+# [Loss_Comparison](./Loss_Comparison)
 
 
+In the previous section, we introduced a new loss function named FocalTverskyLoss,
+ which combines the focal loss function and the Tversky loss function. In this section,
+ we apply and train the model on a single fold of axial data using four different loss functions:
+ Dice coefficient, focal loss, Tversky loss, and our new FocalTverskyLoss. We then compare the results on
+ the validation data using metrics such as recall, precision, and the Dice coefficient. Our results demonstrate that the FocalTverskyLoss generally performs better overall.
 
-
+for more details, please refer to the # [Loss_Comparison](./Loss_Comparison) directory.
 
 
 
