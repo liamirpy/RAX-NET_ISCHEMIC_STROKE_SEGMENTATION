@@ -590,17 +590,7 @@ number_of_epoch=10
 
 for epoch in range(number_of_epoch):
 
-
     for batch in range(train_data_mask.shape[0]):
-
-
-
-
-
-
-
-
-
 
         if batch <  train_data_mask.shape[0] -1 :
     
@@ -618,11 +608,6 @@ for epoch in range(number_of_epoch):
             
             # Simulate a delay
             time.sleep(0.1)
-
-
-
-
-
 
 
         if batch == train_data_mask.shape[0] -1 :

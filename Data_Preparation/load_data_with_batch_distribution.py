@@ -521,9 +521,9 @@ class load_data:
 
 
         np.save(f'{saved_directory}/train_data_mri_fold_{self.fold}.npy',self.train_data_mri)
-        np.save(f'{saved_directory}train_data_mask_fold_{self.fold}.npy',self.train_data_mask)
-        np.save(f'{saved_directory}validation_data_mri_fold_{self.fold}.npy',self.validation_data_mri)
-        np.save(f'{saved_directory}validation_data_mask_fold_{self.fold}.npy',self.validation_data_mask)
+        np.save(f'{saved_directory}/train_data_mask_fold_{self.fold}.npy',self.train_data_mask)
+        np.save(f'{saved_directory}/validation_data_mri_fold_{self.fold}.npy',self.validation_data_mri)
+        np.save(f'{saved_directory}/validation_data_mask_fold_{self.fold}.npy',self.validation_data_mask)
 
 
 

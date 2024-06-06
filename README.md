@@ -326,12 +326,26 @@ in This section we developed the code for read the data based on that categorize
 data to load the data for training and evaluation model easily .
 Also, we should mention that all data after loading normilzed between 0 to 255 as float and put it in numpy arry.
 
-for more details, please refer to the [Data Preparation](./Data_prepration).
+for more details, please refer to the [Data Preparation](./Data_Prepration).
 
 
+# [Model](./Model)
+
+In this section, we introduce a new model and architecture based on deep learning for segmentation, especially stroke segmentation.
+
+The model comprises convolution, depthwise convolution, and residual connections (new residual connections). 
+The model has a downsampling part and an upsampling part for extracting information in the downsampling part and reconstruction in the upsampling part.
+
+In this directory, the model and other parameters for training the model are included. 
+For more concepts and understanding, the model is depicted in the plot below. Additionally, the architecture of the depthwise convolution is also plotted in this directory.
+
+For more details about the model and approaches, it is better to read the article that we wrote.
+
+For more details about the code and model, please refer to the [Model](./Model) directory.
 
 
-
+> [!IMPORTANT]
+> In this section, you are able to run the model for training.
 
 
 
