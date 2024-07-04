@@ -6,7 +6,7 @@ data to load the data for training and evaluation model easily .
 Also, we should mention that all data after loading normilzed between 0 to 255 as float and put it in numpy arry.
 
 
-# Approch 
+# Loading data with batch distribution 
 
 
 The approach is simple: first, read the CSV file, and then read the data based on their batch number. 
@@ -43,3 +43,22 @@ The output consists of 4 numpy arrays in .npy format: 2 for MRI data (training a
 ** Due to the size of data we did not includes the data here**
 
 
+
+
+
+# Loading data without batch distribution 
+
+same as the previous part, you just need run this code for each plane and folds
+
+
+
+```
+python3 load_data_with_out_batch_distribution.py \
+	-tcsv ../Distribution_Batch/Coronal_Batches_CSV/fold_2/Train_lesion_normal_batches.csv \
+	-vcsv ../Distribution_Batch/Coronal_Batches_CSV/fold_2/Validation_lesion_normal_batches.csv \	
+	-dd ../Moving_Converting_Data/coronal_2D \
+	-p c \	
+	-fold 2 \	
+	-sd ./without_batch/Coronal
+	
+```

@@ -31,8 +31,8 @@ For this prject we used the following version of tensorflow and keras:
 
 
 ```
-tensorflow == 2.16.1
-keras == 3.3.3 
+tensorflow == 2.14.0
+keras == 2.14.0 
 ```
 
 # PIPLINE 
@@ -165,6 +165,12 @@ graph TD;
 ![Figure](./Data_Splitting/figures/Lesion_information_in_20_Percent_of_665_3D_Subjects.png)
 
 
+
+**The image below represents the lesion size distribution in 80 and 20 Percent of  655 3D subjects in single plot .**
+
+
+
+![Figure](./Data_Splitting/figures/LESION_VOXEL_DISTRIBUTION.png)
 
 
 For more information about this splitting, please go to the [Data_Splitting](./Data_Splitting) directory.
@@ -324,7 +330,14 @@ For more details, please refer to the [Distribution Batch](./Distribution_Batch)
 In previous section we categorized data based on the distribution of data in batches for the reason that we dissuced in previous section.
 in This section we developed the code for read the data based on that categorized batches for training model and generate a numpy arry for all 
 data to load the data for training and evaluation model easily .
-Also, we should mention that all data after loading normilzed between 0 to 255 as float and put it in numpy arry.
+Also, we should mention that all data after loading normilzed between 0 to 255 as float and put it in numpy array.
+
+ The numpy array has a shape of (maximum_batch, batch_size, image.shape[0], image.shape[1], image.shape[2], 1).
+
+We also add the code for loading data with out batch distribution.
+ The numpy array has a shape of (maximum_batch * batch_size, image.shape[0], image.shape[1], image.shape[2], 1).
+
+
 
 for more details, please refer to the [Data Preparation](./Data_Prepration).
 
@@ -361,5 +374,206 @@ In the previous section, we introduced a new loss function named FocalTverskyLos
 
 for more details, please refer to the # [Loss_Comparison](./Loss_Comparison) directory.
 
+
+
+# [Training](./Training)
+
+In this part, we aim to train the proposed model for axial, sagittal, and coronal planes. 
+For each plane, the model will be trained, and the results will be saved in a CSV file in the directory. 
+The weights will also be saved in that directory for future use.
+
+For more details about the training, please refer to the [Training](./Training) directory.
+
+
+
+# [Model_Comparision](./Model_Comparison/)
+
+In this part, we reimplement other state-of-the-art methods in lesion stroke segmentation,
+ specifically for brain lesion strokes in T1 images, for comparison.
+
+We use their code as a model and train the models on our dataset to ensure the comparison is fair.
+ Additionally, we train all models for all planes and folds. In the results, we compare their performance with our model across all planes and folds
+
+
+The model that used for comparison are : 
+
+- D-Unet[^1] 
+- CLCI[^2] 
+- X-net[^3] 
+
+[^1]: D-UNet: a dimension-fusion U shape network for chronic stroke lesion segmentation. [Article](https://arxiv.org/pdf/1908.05104)
+[^2]: CLCI-Net: Cross-Level fusion and Context Inference Networks for Lesion Segmentation of Chronic Stroke[Article](https://arxiv.org/pdf/1907.07008)
+[^3]: X-Net: Brain Stroke Lesion Segmentation Basedon Depthwise Separable Convolution and Long-range Dependencies [Article](https://arxiv.org/pdf/1907.07000)
+
+
+# [Model_Results](./Model_Results/)
+
+"In this section, we present the results of the proposed model for axial, sagittal, and coronal views. We used the trained model to predict the validation data and evaluated the results using various metrics. The results are reported in this directory, and a summary of the results is also provided here.
+
+For more details, please refer to the [Model_Results](./Model_Results/)directory.
+
+# Axial
+
+The Result of Axial: 
+
+
+
+|      Folds    |      Dice      |       Recall    |   Precision    |             Average Score             |
+| ------------- | -------------- | --------------- | ---------------|---------------------------------------|
+|     Fold_1    |0.6878 +- 0.3762|0.8055 +- 0.3291 |0.7713 +- 0.3324|(0.6878 + 0.8055 + 0.7713) / 3 = 0.7549|
+|     Fold_2    |0.7047 +- 0.3792|0.7674 +- 0.3606 |0.8391 +- 0.2832|(0.7047 + 0.7674 + 0.8391) / 3 = 0.7704|
+|     Fold_3    |0.7282 +- 0.3558|0.7958 +- 0.3355 |0.8269 +- 0.2808|(0.7282 + 0.7958 + 0.8269) / 3 = 0.7836|
+|     Fold_4    |0.7209 +- 0.3684|0.7753 +- 0.3533 |0.8515 +- 0.2678|(0.7209 + 0.7753 + 0.8515) / 3 = 0.7826|
+|     Fold_5    |0.7104 +- 0.3776|0.7567 +- 0.3675 |0.8638 +- 0.2559|(0.7104 + 0.7567 + 0.8638) / 3 = 0.7770|
+|   All_Folds   |0.7104 +- 0.0127|0.7801 +- 0.0164 |0.8305 +- 0.0292|                                       |
+
+
+Best Fold for Axial Plane: Fold 3 (Highest Average Score: 0.7836)
+
+
+
+
+# Coronal
+
+The Result of Coronal: 
+
+
+
+|      Folds    |      Dice      |       Recall    |   Precision    |             Average Score             |
+| ------------- | -------------- | --------------- | ---------------|---------------------------------------|
+|     Fold_1    |0.6579 +- 0.3990|0.7605 +- 0.3735 |0.7844 +- 0.3301|(0.6579 + 0.7605 + 0.7844) / 3 = 0.7343|
+|     Fold_2    |0.6918 +- 0.3802|0.7665 +- 0.3569 |0.8161 +- 0.3033|(0.6918 + 0.7665 + 0.8161) / 3 = 0.7581|
+|     Fold_3    |0.6932 +- 0.3843|0.7451 +- 0.3769 |0.8512 +- 0.2704|(0.6932 + 0.7451 + 0.8512) / 3 = 0.7632|
+|     Fold_4    |0.6994 +- 0.3810|0.7620 +- 0.3627 |0.8376 +- 0.2874|(0.6994 + 0.7620 + 0.8376) / 3 = 0.7663|
+|     Fold_5    |0.6953 +- 0.3861|0.7402 +- 0.3801 |0.8701 +- 0.2519|(0.6953 + 0.7402 + 0.8701) / 3 = 0.7685|
+|   All_Folds   |0.6875 +- 0.0137|0.7549 +- 0.0093 |0.8319 +- 0.0269|                                       |
+           
+
+Best Fold for Coronal Plane: Fold 5 (Highest Average Score: 0.7685)
+
+
+
+# Sagittal
+
+The Result of Sagittal: 
+
+
+
+|      Folds    |      Dice      |       Recall    |   Precision    |             Average Score             |
+| ------------- | -------------- | --------------- | ---------------|---------------------------------------|
+|     Fold_1    |0.6260 +- 0.3996|0.6931 +- 0.3889 |0.7838 +- 0.3313|(0.6260 + 0.6931 + 0.7838) / 3 = 0.7010|
+|     Fold_2    |0.6058 +- 0.4159|0.6685 +- 0.4100 |0.8236 +- 0.3064|(0.6058 + 0.6685 + 0.8236) / 3 = 0.6993|
+|     Fold_3    |0.6527 +- 0.3947|0.7062 +- 0.3879 |0.8305 +- 0.2841|(0.6527 + 0.7062 + 0.8305) / 3 = 0.7298|
+|     Fold_4    |0.6178 +- 0.3992|0.7302 +- 0.3781 |0.7492 +- 0.3447|(0.6178 + 0.7302 + 0.7492) / 3 = 0.6991|
+|     Fold_5    |0.6063 +- 0.3989|0.7297 +- 0.3738 |0.7346 +- 0.3537|(0.6063 + 0.7297 + 0.7346) / 3 = 0.6902|
+|   All_Folds   |0.6217 +- 0.0157|0.7055 +- 0.0212 |0.7843 +- 0.0350|                                       |
+
+
+Best Fold for Sagittal Plane: Fold 3 (Highest Average Score: 0.7298)
+
+
+
+
+# [Fusion](./Fusion/)
+
+In this part, we apply the fusion approach. For each subject, we decompose the subject into its planes: axial,
+ sagittal, and coronal. We then predict for each plane and fuse the results of these planes. The fusion approach involves 
+ summing all the prediction values for each plane, and if the average (sum of predictions divided by 3) is greater than 0.5, we classify that pixel as 1.
+
+For more details, please refer to the [fusion](./Fusion/) directory.
+
+
+
+## AXIAL:
+
+
+
+|      Fusion   |      Dice      |    Precision    |     Recall     |
+| ------------- | -------------- | --------------- | ---------------|
+|     Before    |0.8016 +- 0.0761|0.8612 +- 0.0606 |0.8748 +- 0.0803|
+|     After     |0.8451 +- 0.0821|0.9019 +- 0.0651 |0.8807 +- 0.0813|
+
+
+The raincloud:
+![Figure](./Fusion/figures/axial_plane_before_after_fusion.png)
+
+
+## SAGITTAL:
+
+
+
+|      Fusion   |      Dice      |    Precision    |     Recall     |
+| ------------- | -------------- | --------------- | ---------------|
+|     Before    |0.8231 +- 0.0806|0.8830 +- 0.0657 |0.8951 +- 0.0725|
+|     After     |0.8753 +- 0.0766|0.9331 +- 0.0476 |0.9022 +- 0.0745|
+
+The raincloud:
+
+![Figure](./Fusion/figures/sagittal_plane_before_after_fusion.png)
+
+
+## CORONAL:
+
+
+
+|      Fusion   |      Dice      |    Precision    |     Recall     |
+| ------------- | -------------- | --------------- | ---------------|
+|     Before    |0.8184 +- 0.0970|0.8984 +- 0.0750 |0.8712 +- 0.0856|
+|     After     |0.8633 +- 0.0847|0.9156 +- 0.0687 |0.8987 +- 0.0747|
+
+The raincloud:
+
+![Figure](./Fusion/figures/coronal_plane_before_after_fusion.png)
+
+
+## 3D EVALUATION:
+
+
+
+
+|      Number_of subject   |      Dice      |    Precision    |     Recall     | volume_difference   |
+| -------------------------| -------------- | --------------- | ---------------|---------------------|
+|     112 Subject          |0.6126 +- 0.2577|0.6833 +- 0.2281 |0.6385 +- 0.2963| 6486.5892 +- 9686.75|
+
+
+The raincloud:
+![Figure](./Fusion/figures/values_of_metrics_for_3D_subjects.png)
+
+
+
+
+# [Docker](./Docker/)
+
+The final aspect of this segmentation model is providing a Docker container. The Docker container allows other users to use the model without needing to install any dependencies or libraries. This Docker setup is useful for those who want to use the model with their own data.
+
+To use the Docker container, you need to clone this repository and change the directory to the Docker directory. You need to install Docker on your system. It's easy to install, and you can check the tutorial on Docker's main website.
+
+Then, download the trained weights model from the following link.
+
+After that, place the three trained models (axial.h5, sagittal.h5, coronal.h5) in the trained_models folder in the Docker directory. Then, put your data in the ./data directory and run the following commands.
+
+First, build the Docker image:
+
+
+
+```
+docker build -t rux .
+
+```
+Then, run the Docker container:
+
+
+
+```
+docker run -v $(pwd)/results:/results -p 4000:80 rux
+
+```
+
+The results will be saved in the results directory.
+
+Your data should be in the size of (197, 233, 189). If it is not in this size, use FreeSurfer to resample your data. The command in FreeSurfer is:
+
+
+mri_convert --reslice_like reference.nii input.nii output.nii
 
 

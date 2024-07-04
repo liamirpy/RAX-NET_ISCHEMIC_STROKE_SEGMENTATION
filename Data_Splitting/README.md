@@ -78,6 +78,15 @@ The image below represents the lesion size distribution in 20 Percent of  655 3D
 ![Figure](./figures/Lesion_information_in_20_Percent_of_665_3D_Subjects.png)
 
 
+
+# Display Lesion Distribution in 20 and 80 percent of MRI Subject
+
+![Figure](./figures/LESION_VOXEL_DISTRIBUTION.png)
+
+
+
+
+
 # Disply Lesion Distribution in 2D Axial Plane of 80 Percent of 3D MRI Subject
 
 The image below represents the lesion size distribution in Axial Plane of 80 Percent of 655 3D MRI Subjects.
