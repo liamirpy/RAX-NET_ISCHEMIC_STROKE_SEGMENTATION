@@ -115,7 +115,7 @@ class ModelTrainer:
         checkpointer=tf.keras.callbacks.ModelCheckpoint(f'{self.checkpoint_path}/{self.checkpoint_name}.h5',verbose=1,save_best_only=True)
         
 
-        callbacks=[checkpointer,tf.keras.callbacks.EarlyStopping(patience=5,monitor='val_loss')]
+        callbacks=[checkpointer,tf.keras.callbacks.EarlyStopping(patience=10,monitor='val_loss')]
 
 
 

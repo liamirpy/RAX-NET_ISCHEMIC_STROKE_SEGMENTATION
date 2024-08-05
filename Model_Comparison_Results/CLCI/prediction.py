@@ -186,7 +186,7 @@ number_of_folds=5
 
 # for plane in [axial_fold_csv_directory,sagittal_fold_csv_directory,coronal_fold_csv_directory]:
 
-for plane in [coronal_fold_csv_directory]:
+for plane in [axial_fold_csv_directory,sagittal_fold_csv_directory]:
 
 
 
