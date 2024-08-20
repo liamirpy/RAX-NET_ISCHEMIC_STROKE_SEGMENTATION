@@ -41,27 +41,32 @@ The pipeline of this project is listed in below.
 
  - [ ] **[Dataset](./Dataset)** 
 
-- [ ] **Data Splitting** 
+- [ ] **[Data_Splitting](./Data_Splitting)** 
 
-- [ ] **Moving_Converting_data**  
+- [ ] **[Moving_Converting_data](./Moving_Converting_Data)**  
  
-- [ ] **Batch-Distribution**  
+- [ ] **[Batch-Distribution](./Distribution)**  
 
-- [ ] **Data Preparation** 
+- [ ] **[Data Preparation](./Data_Preparation) ** 
 
-- [ ] **Model** 
+- [ ] **[Model](./Model)** 
 
-- [ ] **Loss_Comparison** 
+- [ ] **[Loss_Comparison](./Loss_Comparison)** 
 
-- [ ] **Training** 
+- [ ] **[Training](./Training)** 
 
-- [ ] **Model_Comparision**
+- [ ] **[Model_Comparision](./Model_Comparison/)**
 
-- [ ] **Model_Results**
+- [ ] **[Model_Results](./Model_Results/)**
 
-- [ ] **Fusion**
+- [ ] **[Fusion](./Fusion/)**
 
-- [ ] **Docker**
+- [ ] **[Docker](./Docker/)**
+
+
+
+
+
 
 
 # [Dataset](./Dataset)
