@@ -39,32 +39,29 @@ keras == 2.14.0
 
 The pipeline of this project is listed in below.
 
+ - [ ] **Dataset** 
+
+- [ ] **Data Splitting** 
+
+- [ ] **Moving_Converting_data**  
  
-- [ ] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
+- [ ] **Batch-Distribution**  
 
-- [ ] **Data Spliting** (Based on the previously extracted information, split the 3D data)
+- [ ] **Data Preparation** 
 
-- [ ] **Cross-Validation** (Bas on previous section, develop cross-validation for training the model)
+- [ ] **Model** 
 
-- [ ] **Transmition of Data** ( Copying and convert 3D MRI to 2D slices)
+- [ ] **Loss_Comparison** 
 
-- [ ] **Read/Prepare Data for Training and Evaluation** ( Read based on cross-validation spliting and save as arrays)
+- [ ] **Training** 
 
-- [ ] **Prepare the Model of Training** (Design the model and set model hyperparameters)
+- [ ] **Model_Comparision**
 
-- [ ] **Train the Model** 
+- [ ] **Model_Results**
 
-- [ ] **Results for Each Planes**
+- [ ] **Fusion**
 
-- [ ] **Other satates of art** 
-
-- [ ] **Applying Fusion** 
-
-- [ ] **Fusion Result**
-
-- [ ] **The Weighted and Saved model for Use** 
-
-- [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model) 
+- [ ] **Docker**
 
 
 # [Dataset](./Dataset)
@@ -108,31 +105,6 @@ In this section we covered these:
 
 
 
-- [x] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
-
-- [ ] **Data Splitting** (Based on the previously extracted information, split the 3D data)                  
-
-- [ ] **Cross-Validation** (Bas on previous section, develop cross-validation for training the model)
-
-- [ ] **Transmition of Data** ( Copying and convert 3D MRI to 2D slices)
-
-- [ ] **Read/Prepare Data for Training and Evaluation** ( Read based on cross-validation spliting and save as arrays)
-
-- [ ] **Prepare the Model of Training** (Design the model and set model hyperparameters)
-
-- [ ] **Train the Model**
-
-- [ ] **Results for Each Planes**
-
-- [ ] **Other satates of art**
-
-- [ ] **Applying Fusion**
-
-- [ ] **Fusion Result**
-
-- [ ] **The Weighted and Saved model for Use**
-
-- [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model)
 
 
 # [Data_Splitting](./Data_Splitting)
@@ -176,34 +148,8 @@ graph TD;
 For more information about this splitting, please go to the [Data_Splitting](./Data_Splitting) directory.
 
 
-- [x] **Dataset** (Download, Explaination of data, Exctraction of information eg. lesion distribution)
 
-- [x] **Data Splitting** (Based on the previously extracted information, split the 3D data)
-
-- [ ] **Cross-Validation** (Bas on previous section, develop cross-validation for training the model)
-
-- [ ] **Transmition of Data** ( Copying and convert 3D MRI to 2D slices)
-
-- [ ] **Read/Prepare Data for Training and Evaluation** ( Read based on cross-validation spliting and save as arrays)
-
-- [ ] **Prepare the Model of Training** (Design the model and set model hyperparameters)
-
-- [ ] **Train the Model**
-
-- [ ] **Results for Each Planes**
-
-- [ ] **Other satates of art**
-
-- [ ] **Applying Fusion**
-
-- [ ] **Fusion Result**
-
-- [ ] **The Weighted and Saved model for Use**
-
-- [ ] **Docker** ( For ease of use, we developed the docker composer to easly use the model)
-
-
-# [Mvoving_Converting_data](./Moving_Converting_Data)
+# [Moving_Converting_data](./Moving_Converting_Data)
 
 In this section, we developed the code to use the CSV files generated in the previous section to move 80% and 20% of the data to their respective folders.
  Additionally, we converted the 80% of the data into 2D slices for each plane: axial, sagittal, and coronal.
@@ -253,19 +199,12 @@ For the rest of plane please refere to cross-validation directory.
 
 
 
-
-
-
-
-
-
-
 For more details about this code and how to generate it, please refer to the [cross-validation](./Cross_Validation) directory.
 
 
 
 
-# [Distribution-Batch](./Distribution)
+# [Batch-Distribution](./Distribution)
 
 In the last section, we generated CSV files for K-fold cross-validation. 
 To train the model, we train it on K-1 folds and test it on one fold.
